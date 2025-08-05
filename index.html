@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><h1>Portfolio</h1></div>
+      <ul class="nav-links">
+        <li><a href="">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hi, I'm <span>Snehasish Das</span></h1>
+        <p>I write code that not only works but wows. With a passion for design and a love for logic, I enjoy turning ideas into sleek, interactive web apps that people enjoy using.
+        <br>
+        <br>
+        Beyond the frontend, I dive deep into data — analyzing trends, uncovering insights, and turning numbers into decisions. Whether it's building beautiful interfaces or making sense of complex datasets, I love crafting solutions that are both intuitive and intelligent.
+        </p>
+      </div>
+      <div class="hero-img">
+        <div class="img-card">
+          <img src="images/profile.jpg" alt="Snehasish Das">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--About Section -->
+  <section id="about" class="section">
+    <div class="about-wrapper">
+      <div class="about-container">
+        <h2>About Me</h2>
+        <p>
+          I specialize in backend development with <strong>Python, Flask, FastAPI and Django</strong>, and handle data using <strong>MySQL, MongoDB</strong>. Whether it’s designing a stunning front end or analyzing data through <strong>Power BI and Tableau</strong>, 
+          <br>
+          I’m passionate about building things that not only <em>look</em> good but <em>feel</em> great.
+          <br><br>
+          Scroll down — cool stuff ahead! 👇
+        </p>
+      </div>
+  
+      <div class="stats-container">
+        <div class="stat-box">
+          <h3>Hackathon Finalist</h3>
+          <p>1</p>
+        </div>
+        <div class="stat-box">
+          <h3>Hackathon Participants</h3>
+          <p>5+</p>
+        </div>
+        <div class="stat-box">
+          <h3>Total Projects Completed</h3>
+          <p>10+</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="download-section">
+        <a href="resume\Snehasish Das_CV.pdf" download class="download-btn">Download My CV</a>
+        <a href="resume\cover_letter.pdf" download class="download-btn">Download My Cover Letter</a>
+    </div>
+
+  </section>
+
+  <!--Skills-->
+  <section id="skills" class="section">
+    <br>
+    <h2 align="center">Technical Skills</h2>
+    <div class="skills-container">
+      
+      <!-- Frontend -->
+      <div class="skill-card">
+        <h3>Frontend Development</h3>
+        <p>HTML, CSS, JavaScript</p>
+        <div class="skill-icons">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML" title="HTML">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS" title="CSS">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript" title="JavaScript">
+        </div>
+      </div>
+  
+      <!-- Backend -->
+      <div class="skill-card">
+        <h3>Backend Development</h3>
+        <p>Python, Flask, FastAPI, MySQL, MongoDB</p>
+        <div class="skill-icons">
+          <img src="images\python.png" alt="Python" title="Python">
+          <img src="images\flask.png" alt="Flask" title="Flask">
+          <img src="images\fastapi.png" alt="FastAPI" title="FastAPI">
+          <img src="images\mysql.png" alt="MySQL" title="MySQL">
+          <img src="images\mongo.png" alt="MongoDB" title="MongoDB">
+        </div>
+      </div>
+  
+      <!-- Data Analysis -->
+      <div class="skill-card">
+        <h3>Data Analysis Tools</h3>
+        <p>Power BI, Excel, Tableau</p>
+        <div class="skill-icons">
+          <img src="images\powerbi.png" alt="Power BI" title="Power BI">
+          <img src="images\excel.png" alt="Excel" title="Excel">
+          <img src="images\table.png" alt="Tableau" title="Tableau">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="professional-skills" class="section">
+    <h2>Professional Skills</h2>
+    <div class="donut-charts">
+  
+      <div class="donut-chart" data-percent="70">
+        <svg viewBox="0 0 36 36" class="shadow">
+          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+          <path class="circle" stroke-dasharray="70, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+        </svg>
+        <div class="donut-label">
+          <strong>70%</strong>
+          <span>Communication</span>
+        </div>
+      </div>
+  
+      <div class="donut-chart" data-percent="90">
+        <svg viewBox="0 0 36 36" class="shadow">
+          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+          <path class="circle" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+        </svg>
+        <div class="donut-label">
+          <strong>90%</strong>
+          <span>Teamwork</span>
+        </div>
+      </div>
+  
+      <div class="donut-chart" data-percent="80">
+        <svg viewBox="0 0 36 36" class="shadow">
+          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+          <path class="circle" stroke-dasharray="80, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+        </svg>
+        <div class="donut-label">
+          <strong>80%</strong>
+          <span>Project Management</span>
+        </div>
+      </div>
+  
+      <div class="donut-chart" data-percent="75">
+        <svg viewBox="0 0 36 36" class="shadow">
+          <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+          <path class="circle" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 1 1 0 31.831 a 15.9155 15.9155 0 1 1 0 -31.831" />
+        </svg>
+        <div class="donut-label">
+          <strong>75%</strong>
+          <span>Time Management</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+   <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2 align="center">Projects</h2>
+    <div class="projects-container">
+  
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="images\ecom.png" alt="Portfolio Website">
+        <h3>Personal Ecommerce Website</h3>
+        <p>A modern responsive Ecommerce website built using Python, Flask, MySQL, HTML, CSS, JavaScript and Razarpay API to showcase my work.</p>
+        <a href="https://drive.google.com/file/d/10YfQXzpfJB7VcLvA3WcViN4pYUic6qcP/view?usp=sharing" target="_blank">Live Demo</a>
+        <br>
+        <a href="https://github.com/Snehasish5/Ecommerce_app" target="_blank">GitHub</a>
+      </div>
+  
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="images\forecast.png" alt="Data Dashboard">
+        <h3>Sales Data Dashboard</h3>
+        <p>A Sales Forecasting Dashboard built with Python and Streamlit to predict sales and analyze profits by region using Superstore data.</p>
+        <a href="https://salesforecastdashboard-3marsux6bmjuyxkgzegmzc.streamlit.app/" target="_blank">View Dashboard</a>
+        <br>
+        <a href="https://github.com/Snehasish5/SalesForecastDashboard" target="_blank">GitHub</a>
+      </div>
+  
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="images/chat-app.jpg" alt="Chat App">
+        <h3>Real-Time Chat App</h3>
+        <p>Flask + Socket.IO based chat app with user authentication and live messaging.</p>
+        <a href="#">Live Demo</a>
+        <a href="#">GitHub</a>
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <footer>
+    <section id="contact" class="footer-contact section">
+      <h2>Contact Me</h2>
+      <p>Let’s collaborate or discuss an opportunity!</p>
+      <a href="tel:+916290087607" class="btn">Call Me</a>
+    </section>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 Snehasish Das | All rights reserved</p>
+      <div class="socials">
+        <a href="mailto:dsnehasish73@gmail.com" target="_blank" rel="noopener">Email</a>
+        <a href="https://github.com/Snehasish5" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/snehasish-das-03a896292/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>  
+</body>
+</html>
