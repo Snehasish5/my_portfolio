@@ -25,7 +25,7 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ddd;
-  position: sticky;
+  position: static;
   top: 0;
   z-index: 10;
 }
@@ -58,6 +58,7 @@ header {
   justify-content: space-between;
   margin-left: 4rem;
   padding: 20px;
+  position: static !important;
 }
 
 .nav-links {
@@ -199,6 +200,7 @@ header {
   }
 }
 
+/* Desktop / Laptop styles */
 @media (min-width: 768px) {
   .hero-content {
     flex-direction: row;
@@ -213,6 +215,27 @@ header {
   .hero-img img {
     width: 280px;
     height: 280px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .hero-img {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .hero-img .img-card {
+    transform: translateX(0);
+    padding: 20px;
+  }
+
+  .hero-img img {
+    max-width: 80vw;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto;
   }
 }
 
