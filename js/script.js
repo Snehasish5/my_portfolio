@@ -28,4 +28,11 @@ document.getElementById("toggleMode").addEventListener("click", () => {
       }, 100);
     });
   });
+
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("show");
+  }
+  
+
   
