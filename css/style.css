@@ -106,7 +106,7 @@ header {
   }
 
   .nav-links {
-    display: none !important;
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 4.5rem;
@@ -120,7 +120,7 @@ header {
   }
 
   .nav-links.show {
-    display: flex !important;
+    display: flex;
   }
 
   .nav-links li {
@@ -148,7 +148,7 @@ header {
 
 .hero-text h1 {
   font-size: 2.8rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
   font-weight: bold;
   text-shadow: 0 0 8px #fc00ff88;
 }
@@ -156,14 +156,14 @@ header {
 .hero-text p {
   font-size: 1.4rem;
   margin-top: 1rem;
-  margin-left: 3rem;
+  margin-left: 2rem;
   max-width: 600px;
   text-align: justify;
 }
 
 .hero-img .img-card {
   background-color: transparent;
-  padding: 40px;
+  padding: 30px;
   border-radius: 50%;
   box-shadow: 0 0 40px rgba(255, 0, 255, 0.2);
   animation: floatImage 4s ease-in-out infinite;
