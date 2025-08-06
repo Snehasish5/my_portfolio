@@ -227,8 +227,8 @@ header {
   }
 
   .hero-img .img-card {
-    transform: translateX(0);
-    padding: 20px;
+    transform: translateX(10px);
+    padding: 30px;
   }
 
   .hero-img img {
@@ -254,13 +254,14 @@ header {
 .about-container h2 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #a4a2a2;
+  color: #ffffff;
 }
 
 .about-container p {
   font-size: 18px;
-  color: #555;
+  color: #979393;
   line-height: 1.7;
+  text-align: justify;
 }
 
 .scroll-note {
@@ -492,6 +493,54 @@ footer {
     justify-content: flex-start;
   }
 }
+
+@media (max-width: 767px) {
+  footer {
+    padding: 40px 15px 25px;
+    text-align: left;
+  }
+
+  .footer-contact {
+    text-align: center;
+  }
+
+  .footer-contact h2 {
+    font-size: 1.5em;
+  }
+
+  .contact-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1em;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .footer-bottom p {
+    margin-bottom: 0;
+    font-size: 0.95em;
+  }
+
+  .socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+  }
+
+  .socials a {
+    font-size: 1em;
+    padding: 4px 0;
+  }
+}
+
 
 .section h2 {
   font-size: 2.2rem;
