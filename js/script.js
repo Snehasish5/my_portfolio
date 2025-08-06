@@ -13,7 +13,6 @@ document.getElementById("toggleMode").addEventListener("click", () => {
       }, 100);
     });
   });
-  
 // Dark Mode Toggle
 document.getElementById("toggleMode").addEventListener("click", () => {
     document.body.classList.toggle("dark");
