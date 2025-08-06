@@ -65,7 +65,7 @@ header {
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  margin-left: 40rem;
+  margin-left: 30rem;
 }
 
 .nav-links li a {
@@ -148,10 +148,10 @@ header {
 
 @keyframes floatImage {
   0%, 100% {
-    transform: translateX(-135px) translateY(0);
+    transform: translateX(-100px) translateY(0);
   }
   50% {
-    transform: translateX(-135px) translateY(-10px);
+    transform: translateX(-100px) translateY(-10px);
   }
 }
 
