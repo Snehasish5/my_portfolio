@@ -340,7 +340,7 @@ header {
     display: block;
   }
 
-  .socials {
+  .hero-content .socials {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
@@ -348,7 +348,7 @@ header {
     margin-bottom: 1rem;
   }
   
-  .socials a {
+  .hero-content .socials a {
     font-size: 1em;
     padding: 4px 5px;
     display: flex;
