@@ -245,12 +245,16 @@ header {
     align-items: center;
     width: 100%;
     margin-top: 20px;
+    text-align: center; /* optional, aligns text if needed */
   }
 
   .hero-img .img-card {
     padding: 0;
-    margin: 0;
+    margin: 0 auto; /* center horizontally */
     box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero-img img {
