@@ -471,16 +471,24 @@ header {
 
   .stat-box {
     width: 160px;
-    height: 180px;
+    height: 160px;           /* Make height = width for perfect circle */
     padding: 1rem;
+    border-radius: 50%;      /* Makes the box circular */
+    display: flex;           /* Flex to center content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;  /* Include padding in size */
   }
 
   .stat-box h3 {
     font-size: 1rem;
+    margin: 0;
   }
 
   .stat-box p {
     font-size: 1.5rem;
+    margin: 0;
   }
 }
 
