@@ -343,7 +343,7 @@ header {
   .hero-content .socials {
     display: flex;
     flex-direction: row;     /* Ensure items are in a row */
-    justify-content: center; /* Center horizontally */
+    justify-content: flex-start; /* Center horizontally */
     align-items: center;     /* Align vertically */
     gap: 10px;               /* Space between icons */
     margin-bottom: 1rem;  
