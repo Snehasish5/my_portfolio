@@ -45,10 +45,10 @@ header {
 /* Optional subtle glowing effect */
 @keyframes pulseGlow {
   0%, 100% {
-    text-shadow: 0 0 10px #671968, 0 0 20px #00dbde;
+    text-shadow: 0 0 10px #842386, 0 0 20px #00dbde;
   }
   50% {
-    text-shadow: 0 0 20px #111111, 0 0 40px #00dbde;
+    text-shadow: 0 0 20px #494848, 0 0 40px #00dbde;
   }
 }
 
@@ -130,7 +130,7 @@ header {
 /* === MOBILE ONLY (max-width: 767px) === */
 @media (max-width: 767px) {
   .hamburger {
-    display: block;
+    display:flex;
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
@@ -252,6 +252,47 @@ header {
   }
 }
 
+.hero-content .socials {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 1rem;
+  margin-left: 6.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-content .socials a img {
+  width: 40px;
+  height: 40px;
+  object-fit: fill;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 0 4px #58e0ef);
+}
+
+.hero-content .socials a img:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 8px #58e0ef);
+}
+
+.socials {
+  display: flex;
+  gap: 1.2rem;
+  flex: 1 1 200px;
+  justify-content: flex-end;
+}
+
+.socials a {
+  color: #f4ebeb;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #4caf50;
+  text-decoration: underline;
+}
+
 /* Desktop / Laptop styles */
 @media (min-width: 768px) {
   .hero-content {
@@ -297,6 +338,23 @@ header {
     border-radius: 50%;
     object-fit: cover;
     display: block;
+  }
+  
+  .socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center; /* 👈 centers the icons */
+    margin-bottom: 1rem;
+  }
+  
+  .socials a {
+    font-size: 1em;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
   }
 }
 
@@ -565,7 +623,7 @@ footer .btn:hover {
 }
 
 .socials a {
-  color: #888;
+  color: #f4ebeb;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
