@@ -5,9 +5,11 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg);
+  background: radial-gradient(circle at top left, #141a3b, #000000 80%);
+  background-color: #0f0f0f;
   color: var(--text);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
   transition: all 0.3s ease;
 }
 
@@ -19,12 +21,10 @@ body {
 }
 
 header {
-  background: var(--bg);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ddd;
   position: static;
   top: 0;
   z-index: 10;
@@ -51,6 +51,25 @@ header {
     text-shadow: 0 0 20px #121012, 0 0 40px #00dbde;
   }
 }
+
+/* Laptop-destop */
+@media (min-width: 768px) {
+  .logo h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin-left: 4.5rem;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 767px) {
+  .logo h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+}
+
 
 .navbar {
   display: flex;
@@ -230,6 +249,7 @@ header {
 
   .hero-text {
     max-width: 600px;
+    margin-left: 3rem;
   }
 
   .hero-img img {
@@ -269,7 +289,6 @@ header {
 
 /* About Section */
 #about {
-  background: #111111;
   padding: 60px 20px;
   text-align: center;
 }
@@ -277,6 +296,7 @@ header {
 .about-wrapper {
   max-width: 1000px;
   margin: 0 auto;
+  color: #58e0ef;
 }
 
 .about-container h2 {
@@ -287,7 +307,7 @@ header {
 
 .about-container p {
   font-size: 18px;
-  color: #979393;
+  color: #f6eded;
   line-height: 1.7;
   text-align: justify;
 }
@@ -427,60 +447,101 @@ header {
   text-decoration: none;
 }
 
+/* Footer styling */
 footer {
-  background-color: #111111;
-  color: #ddd;
-  padding: 2rem;
-  font-family: Arial, sans-serif;
-}
-
-.footer-contact {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.footer-contact h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  padding: 50px 20px 30px;
   color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.footer-contact p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  color: #bbb;
+footer::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200%;
+  height: 200%;
+  z-index: 0;
+  animation: pulseGlow 5s ease-in-out infinite;
 }
 
-.footer-contact .btn {
-  background-color: #4caf50;
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+footer .footer-contact {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+
+footer .footer-contact h2 {
+  font-size: 2em;
+  color: #58e0ef;
+  margin-bottom: 10px;
+}
+
+footer .footer-contact p {
+  font-size: 1.1em;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+footer .btn {
+  background: linear-gradient(135deg, #00dbde, #fc00ff);
   color: white;
-  padding: 0.65rem 1.5rem;
-  border: none;
+  padding: 12px 25px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(252, 0, 255, 0.3);
 }
 
-.footer-contact .btn:hover {
-  background-color: #388e3c;
+footer .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(252, 0, 255, 0.6);
 }
 
 .footer-bottom {
-  border-top: 1px solid #333;
-  padding-top: 1rem;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-bottom .socials {
   display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 1rem;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  font-size: 0.9rem;
-  color: #888;
+}
+
+.footer-bottom .socials a img {
+  width: 40px;
+  height: 40px;
+  object-fit: fill;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 0 4px #58e0ef);
+}
+
+.footer-bottom .socials a img:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 8px #58e0ef);
 }
 
 .footer-bottom p {
+  font-size: 0.95rem;
+  color: #ccc;
   margin: 0;
-  flex: 1 1 200px;
 }
 
 .socials {
@@ -564,18 +625,19 @@ footer {
   font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: #58e0ef;
 }
 
 .section p {
   font-size: 1.15rem;
   line-height: 1.8;
-  color: #7f7c7c;
+  color: #e8e3e3;
 }
 
 .skills-container {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 15px;
   flex-wrap: wrap;
   margin-top: 30px;
 }
@@ -617,14 +679,13 @@ footer {
 
 #professional-skills {
   padding: 8rem 4rem;
-  background-color: #111111;
   text-align: center;
 }
 
 #professional-skills h2 {
   font-size: 2.2rem;
   margin-bottom: 2rem;
-  color: #928e8e;
+  color: #58e0ef;
 }
 
 .donut-charts {
@@ -635,8 +696,8 @@ footer {
 }
 
 .donut-chart {
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   position: relative;
   transition: transform 0.4s ease;
   filter: drop-shadow(0 4px 6px rgba(106, 105, 105, 0.721));
