@@ -281,11 +281,11 @@ header {
 
 .stat-box {
   background: #ffffff;
-  padding: 25px 30px;
+  padding: 30px 30px;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  min-width: 200px;
-  transition: transform 0.3s ease;
+  min-width: 250px;
+  transition: transform 0.4s ease;
 }
 
 .stat-box:hover {
@@ -295,7 +295,7 @@ header {
 .stat-box h3 {
   margin-bottom: 10px;
   color: #b9b6b6;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .stat-box p {
@@ -350,8 +350,8 @@ header {
 
 .stat-box {
   background-color: #111111;
-  padding: 2rem 2rem;
-  border-radius: 12px;
+  padding: 3rem 3rem;
+  border-radius: 14px;
   box-shadow: 0 2px 8px rgba(106,105,105,0.721);
   color: #fff;
   text-align: center;
