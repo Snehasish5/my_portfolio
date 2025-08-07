@@ -339,18 +339,18 @@ header {
     object-fit: cover;
     display: block;
   }
-  
+
   .socials {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 5px;
     justify-content: center; /* 👈 centers the icons */
     margin-bottom: 1rem;
   }
   
   .socials a {
     font-size: 1em;
-    padding: 4px 8px;
+    padding: 4px 5px;
     display: flex;
     align-items: center;
     color: #fff;
