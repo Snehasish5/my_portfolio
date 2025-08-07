@@ -346,6 +346,7 @@ header {
     gap: 5px;
     justify-content: center; /* 👈 centers the icons */
     margin-bottom: 1rem;
+    margin-right: 6rem;
   }
   
   .hero-content .socials a {
@@ -355,7 +356,6 @@ header {
     align-items: center;
     color: #fff;
     text-decoration: none;
-    margin-right: 6rem;
   }
 }
 
