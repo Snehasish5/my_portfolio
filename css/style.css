@@ -342,11 +342,11 @@ header {
 
   .hero-content .socials {
     display: flex;
-    flex-direction: row;
-    gap: 5px;
-    justify-content: center; /* 👈 centers the icons */
-    margin-bottom: 1rem;
-    margin-right: 6rem;
+    flex-direction: row;     /* Ensure items are in a row */
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Align vertically */
+    gap: 10px;               /* Space between icons */
+    margin-bottom: 1rem;  
   }
   
   .hero-content .socials a {
