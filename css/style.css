@@ -238,79 +238,28 @@ header {
   }
 }
 
-/* smartphone  style */
 @media (max-width: 767px) {
-  /* Container holding both text and image */
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh; /* Full screen height */
-    padding: 20px;
-    gap: 20px;
-  }
-
-  /* Text section - center aligned */
-  .hero-text {
-    text-align: center;
-    margin: 0 auto;
-    animation: fadeIn 1s ease-in-out;
-  }
-
-  .hero-text h1 {
-    font-size: 2.2rem;
-    margin: 0;
-    text-shadow: 0 0 8px #fc00ff88;
-  }
-
-  .hero-text p {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    margin-left: 0;
-    max-width: 90vw;
-    text-align: center;
-  }
-
-  /* Image wrapper */
   .hero-img {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    animation: fadeIn 1.5s ease-in-out;
+    margin-top: 20px;
   }
 
   .hero-img .img-card {
     padding: 0;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
     box-shadow: none;
-    transform: none;
   }
 
   .hero-img img {
     width: 60vw;
-    max-width: 240px;
+    max-width: 220px;
     height: auto;
     border-radius: 50%;
+    object-fit: cover;
     display: block;
-    margin: 0 auto;
-  }
-
-  /* Animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 }
 
