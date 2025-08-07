@@ -428,52 +428,55 @@ header {
 
 .stats-container {
   display: flex;
-  gap: 1.5rem;
-  flex: 1 1 300px;
-  min-width: 280px;
-  justify-content: space-between;
+  gap: 2rem;
+  justify-content: center;
   flex-wrap: wrap;
+  padding: 2rem;
 }
 
 .stat-box {
   background-color: #111111;
-  padding: 3rem 3rem;
-  border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(106,105,105,0.721);
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(106, 105, 105, 0.721);
   color: #fff;
   text-align: center;
-  flex: 1 1 100px;
-  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
 .stat-box h3 {
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0 0;
   font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .stat-box p {
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #4caf50;
-  margin: 1rem;
+  margin: 0.5rem 0;
 }
 
 @media (max-width: 767px) {
   .stats-container {
     flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
-    padding: 0 1rem;
+    gap: 1.5rem;
   }
 
   .stat-box {
-    width: 100%;
-    max-width: 320px;
-    padding: 2rem;
+    width: 160px;
+    height: 160px;
+    padding: 1rem;
   }
 
   .stat-box h3 {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 
   .stat-box p {
@@ -723,7 +726,7 @@ footer .btn:hover {
 
 .skill-card {
   background: #090909;
-  border-radius: 12px;
+  border-radius: 50px;
   padding: 20px;
   height: 150px;
   width: 380px;
@@ -787,7 +790,7 @@ footer .btn:hover {
 }
 
 .donut-chart svg {
-  transform: rotate(0deg);
+  transform: rotate(0deg); /* to start from top */
   width: 100%;
   height: 100%;
 }
@@ -795,14 +798,37 @@ footer .btn:hover {
 .circle-bg {
   fill: none;
   stroke: #111111;
-  stroke-width: 4;
+  stroke-width: 6;
 }
 
+/* Simulated gradient using multiple overlapping strokes */
 .circle {
   fill: none;
+  stroke-linecap: round;
+  stroke-width: 8;
   stroke: #4caf50;
-  stroke-width: 4;
-  stroke-linecap: square;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 25;
+  animation: strokeGradient 3s infinite ease-in-out;
+}
+
+/* Fake gradient animation using color transitions */
+@keyframes strokeGradient {
+  0% {
+    stroke: #1b5e20;
+  }
+  25% {
+    stroke: #2e7d32;
+  }
+  50% {
+    stroke: #388e3c;
+  }
+  75% {
+    stroke: #43a047;
+  }
+  100% {
+    stroke: #1b5e20;
+  }
 }
 
 .donut-label {
