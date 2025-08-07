@@ -347,7 +347,7 @@ header {
     align-items: center;     /* Align vertically */
     gap: 10px;               /* Space between icons */
     margin-bottom: 1rem;  
-    margin-left: 8rem;
+    margin-left: 5rem;
   }
   
   .hero-content .socials a {
