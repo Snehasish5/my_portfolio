@@ -32,7 +32,7 @@ header {
 
 .logo h1 {
   font-size: 3rem;
-  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  background: linear-gradient(90deg, #00dbde, #732a74);
   background-clip: text; /* ✅ standard version */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -45,7 +45,7 @@ header {
 /* Optional subtle glowing effect */
 @keyframes pulseGlow {
   0%, 100% {
-    text-shadow: 0 0 10px #4f0f51, 0 0 20px #00dbde;
+    text-shadow: 0 0 10px #671968, 0 0 20px #00dbde;
   }
   50% {
     text-shadow: 0 0 20px #121012, 0 0 40px #00dbde;
@@ -71,7 +71,7 @@ header {
 .nav-links li a {
   text-decoration: none;
   font-weight: bold;
-  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  background: linear-gradient(90deg, #00dbde, #ecaced);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -200,7 +200,7 @@ header {
   display: block;
   margin: 0 auto;
   border: 6px solid transparent;
-  background: linear-gradient(135deg, #00dbde, #fc00ff);
+  background: linear-gradient(135deg, #00dbde, #9e2ea0);
   background-clip: padding-box;
   padding: 5px;
   box-shadow: 0 0 30px rgba(252, 0, 255, 0.3), 0 0 50px rgba(0, 219, 222, 0.3);
@@ -631,8 +631,8 @@ footer {
 }
 
 .donut-chart {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   position: relative;
   transition: transform 0.4s ease;
   filter: drop-shadow(0 4px 6px rgba(106, 105, 105, 0.721));
@@ -658,7 +658,7 @@ footer {
   fill: none;
   stroke: #4caf50;
   stroke-width: 4;
-  stroke-linecap: round;
+  stroke-linecap: square;
 }
 
 .donut-label {
