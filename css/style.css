@@ -5,7 +5,7 @@
 }
 
 body {
-  background: radial-gradient(circle at top left, #141a3b, #000000 80%);
+  background: radial-gradient(circle at top left, #0a0e27, #000000 80%);
   background-color: #0f0f0f;
   color: var(--text);
   min-height: 100vh;
@@ -48,7 +48,7 @@ header {
     text-shadow: 0 0 10px #671968, 0 0 20px #00dbde;
   }
   50% {
-    text-shadow: 0 0 20px #121012, 0 0 40px #00dbde;
+    text-shadow: 0 0 20px #111111, 0 0 40px #00dbde;
   }
 }
 
@@ -63,10 +63,23 @@ header {
 
 /* Smartphone */
 @media (max-width: 767px) {
+  header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    top: 0;
+    z-index: 10;
+    border-bottom: #fff;
+    border-radius: 1px;
+  }
+
   .logo h1 {
     font-size: 2rem;
     letter-spacing: 1px;
     text-align: center;
+    margin-left: 2rem;
   }
 }
 
@@ -217,7 +230,7 @@ header {
   object-fit: cover;
   border-radius: 50%;
   display: block;
-  margin: 0 auto;
+  margin: 0 9px;
   border: 6px solid transparent;
   background: linear-gradient(135deg, #00dbde, #9e2ea0);
   background-clip: padding-box;
