@@ -283,16 +283,16 @@ header {
   }
 
   .hamburger {
-    display: block;
-  }
-
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
+    display: flex;
   }
 
   .hero-img img {
     width: 200px;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
