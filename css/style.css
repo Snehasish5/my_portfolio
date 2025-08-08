@@ -264,7 +264,7 @@ header {
     }
  
     #typing-text {
-      font-size: 1rem; /* smaller font on mobile */
+      font-size: 0.7rem; /* smaller font on mobile */
       font-weight: 500;
       font-family: monospace, monospace;
       color: var(--accent, #58e0ef);
