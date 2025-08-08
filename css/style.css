@@ -49,14 +49,6 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
-/* Hamburger styling */
-.navbar .hamburger {
-  display: none;
-  font-size: 2rem;
-  color: #ffffff;
-  cursor: pointer;
-}
-
 /* Nav links list */
 .navbar .nav-links {
   list-style: none;
@@ -78,11 +70,8 @@ header {
   color: #ef58e5;
 }
 
-/* Responsive: show hamburger on small screens */
+/* Responsive: show on small screens */
 @media (max-width: 767px) {
-  .navbar .hamburger {
-    display: block;
-  }
   .navbar .nav-links {
     display: none;
     flex-direction: column;
@@ -96,14 +85,6 @@ header {
   .navbar .nav-links.show {
     display: flex;
   }
-}
-
-/* Hamburger for mobile */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
 }
 
 /* Hero Section */
@@ -283,18 +264,6 @@ header {
 
   .nav-links.show {
     display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-    cursor: pointer;
-    font-size: 1.8rem;
-    align-items: center;
-    justify-content: center;
-    user-select: none;
-    padding: 0.25rem 0.5rem;
-    position: relative;
-    z-index: 1000;
   }
 
   .hero-content {
