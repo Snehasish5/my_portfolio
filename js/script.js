@@ -29,40 +29,37 @@ document.getElementById("toggleMode").addEventListener("click", () => {
     });
   });
 
-  function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    if (nav) {
-      nav.classList.toggle("show");
-    }
-  }
-  
   const nav = document.getElementById("navLinks");
-  const hamburger = document.querySelector(".hamburger");
-  
-  function toggleMenu() {
-    nav.classList.toggle("show");
+const hamburger = document.querySelector(".hamburger");
+
+function toggleMenu() {
+  nav.classList.toggle("show");
+}
+
+// Toggle menu when hamburger is clicked
+hamburger.addEventListener("click", function(event) {
+  toggleMenu();
+  event.stopPropagation(); // prevent document click listener from immediately closing menu
+});
+
+// Prevent clicks inside the nav from closing the menu
+nav.addEventListener("click", function(event) {
+  event.stopPropagation();
+});
+
+// Close the menu when clicking outside nav or hamburger
+document.addEventListener("click", function() {
+  if (nav.classList.contains("show")) {
+    nav.classList.remove("show");
   }
-  
-  hamburger.addEventListener("click", function(event) {
-    toggleMenu();
-    event.stopPropagation();
+});
+
+// Close menu when any nav link is clicked
+document.querySelectorAll("#navLinks a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("show");
   });
-  
-  nav.addEventListener("click", function(event) {
-    event.stopPropagation();
-  });
-  
-  document.addEventListener("click", function() {
-    if (nav.classList.contains("show")) {
-      nav.classList.remove("show");
-    }
-  });
-  
-  document.querySelectorAll("#navLinks a").forEach(link => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("show");
-    });
-  });
+});
  
   document.querySelectorAll('.donut-chart').forEach(chart => {
     const percent = chart.getAttribute('data-percent');
