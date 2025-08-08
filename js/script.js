@@ -62,46 +62,30 @@ document.getElementById("toggleMode").addEventListener("click", () => {
   
   function toggleMenu() {
     const nav = document.getElementById("navLinks");
-    if (nav) {
-      nav.classList.toggle("show");
-    }
+    nav.classList.toggle("show");
   }
   
-  // Hide menu when a nav link is clicked (for mobile)
-  document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.querySelectorAll(".nav-links a");
-    const nav = document.getElementById("navLinks");
-  
-    navLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        if (nav.classList.contains("show")) {
-          nav.classList.remove("show");
-        }
-      });
+  // Hide nav when link is clicked (for mobile)
+  document.querySelectorAll("#navLinks a").forEach(link => {
+    link.addEventListener("click", () => {
+      document.getElementById("navLinks").classList.remove("show");
     });
   });
   
-  let lastScrollTop = 0;
-  const navbar = document.querySelector(".navbar");
+  // Hide nav when clicking outside of it
+  document.addEventListener("click", (event) => {
+    const nav = document.getElementById("navLinks");
+    const hamburger = document.querySelector(".hamburger");
+    
+    const isClickInsideNav = nav.contains(event.target);
+    const isClickOnHamburger = hamburger.contains(event.target);
   
-  window.addEventListener("scroll", () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-    if (scrollTop > lastScrollTop) {
-      // Scrolling down - show navbar
-      navbar.style.top = "0";
-      navbar.style.position = "fixed";
-      navbar.style.width = "100%";
-      navbar.style.transition = "top 0.3s";
-    } else {
-      // Scrolling up - hide navbar
-      navbar.style.top = "-80px"; // adjust height to hide fully
+    if (!isClickInsideNav && !isClickOnHamburger) {
+      nav.classList.remove("show");
     }
-  
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // handle negative scroll
-  });
-
-   document.querySelectorAll('.donut-chart').forEach(chart => {
+  });  
+ 
+  document.querySelectorAll('.donut-chart').forEach(chart => {
     const percent = chart.getAttribute('data-percent');
     const circle = chart.querySelector('.circle');
     
