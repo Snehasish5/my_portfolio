@@ -242,7 +242,7 @@ header {
 
     .navbar .logo h1 {
       font-size: 4rem;
-      margin-left: 2rem; /* increased from 1.2rem */
+      margin-left: 4rem; /* increased from 1.2rem */
       background: linear-gradient(45deg, #58e0ef, #ae69fa);
       background-clip: text;
       -webkit-background-clip: text;
@@ -268,7 +268,7 @@ header {
       gap: 1rem; /* keep gaps between icons */
       justify-content: center; /* center the icons horizontally */
       align-items: center;
-      margin-left: 5rem; /* remove left margin on mobile */
+      margin-left: 4.5rem; /* remove left margin on mobile */
       padding-left: 0;
       margin-top: 0; /* add some spacing from content above */
       margin-bottom: -5rem;
