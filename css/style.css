@@ -276,6 +276,7 @@ header {
     right: 1rem;
     padding: 1rem;
     border-radius: 8px;
+    z-index: 999;
   }
 
   .nav-links.show {
