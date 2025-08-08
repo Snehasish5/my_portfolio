@@ -49,6 +49,17 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
+@media (max-width: 767px) {
+  .navbar .logo h1 {
+    font-size: 2.5rem;
+    margin-left: 1.2rem;
+    background: linear-gradient(45deg, #58e0ef, #ae69fa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 /* Nav links list */
 .navbar .nav-links {
   list-style: none;
@@ -68,23 +79,6 @@ header {
 
 .navbar .nav-links li a:hover {
   color: #ef58e5;
-}
-
-/* Responsive: show on small screens */
-@media (max-width: 767px) {
-  .navbar .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #1a1a1a;
-    position: sticky;
-    top: 60px;
-    right: 20px;
-    padding: 1rem;
-    border-radius: 5px;
-  }
-  .navbar .nav-links.show {
-    display: flex;
-  }
 }
 
 /* Hero Section */
@@ -273,7 +267,7 @@ header {
 
   .hero-img {
     order: -1; /* Image comes first */
-    margin-bottom: 1rem;
+    margin-bottom: -1rem;
   }
 
   .hero-img img {
