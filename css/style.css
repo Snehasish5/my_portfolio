@@ -231,9 +231,10 @@ header {
     flex-wrap: wrap;
     position: relative; /* ensure relative for absolute nav */
   }
-    .navbar .logo h1 {
+     .logo h1 {
       font-size: 4rem;
       text-align: center;
+      margin-left: 3rem;
       background: linear-gradient(45deg, #58e0ef, #ae69fa);
       background-clip: text;
       -webkit-background-clip: text;
