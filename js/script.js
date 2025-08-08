@@ -61,26 +61,22 @@ document.getElementById("toggleMode").addEventListener("click", () => {
   });
   
   function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("show");
+    document.getElementById("navLinks").classList.toggle("show");
   }
   
-  // Hide nav when link is clicked (for mobile)
   document.querySelectorAll("#navLinks a").forEach(link => {
     link.addEventListener("click", () => {
       document.getElementById("navLinks").classList.remove("show");
     });
   });
   
-  // Hide nav when clicking outside of it
   document.addEventListener("click", (event) => {
     const nav = document.getElementById("navLinks");
     const hamburger = document.querySelector(".hamburger");
-    
-    const isClickInsideNav = nav.contains(event.target);
-    const isClickOnHamburger = hamburger.contains(event.target);
   
-    if (!isClickInsideNav && !isClickOnHamburger) {
+    if (nav.classList.contains("show") &&
+        !nav.contains(event.target) &&
+        !hamburger.contains(event.target)) {
       nav.classList.remove("show");
     }
   });  
