@@ -282,7 +282,7 @@ header {
   
   .hero-content p{
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 
     .hero-img {
