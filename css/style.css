@@ -284,7 +284,9 @@ header {
   }
 
   .hamburger {
-    display: flex;
+    display: none;
+    position: relative;
+    z-index: 1000;
     cursor: pointer;
   }
 }

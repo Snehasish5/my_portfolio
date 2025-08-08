@@ -36,27 +36,33 @@ document.getElementById("toggleMode").addEventListener("click", () => {
     }
   }
   
-  // Close menu when clicking outside or on any nav link
-  document.addEventListener("click", function (event) {
-    const nav = document.getElementById("navLinks");
-    const hamburger = document.querySelector(".hamburger");
+  const nav = document.getElementById("navLinks");
+  const hamburger = document.querySelector(".hamburger");
   
-    if (
-      nav.classList.contains("show") &&
-      !nav.contains(event.target) &&
-      !hamburger.contains(event.target)
-    ) {
+  function toggleMenu() {
+    nav.classList.toggle("show");
+  }
+  
+  hamburger.addEventListener("click", function(event) {
+    toggleMenu();
+    event.stopPropagation();
+  });
+  
+  nav.addEventListener("click", function(event) {
+    event.stopPropagation();
+  });
+  
+  document.addEventListener("click", function() {
+    if (nav.classList.contains("show")) {
       nav.classList.remove("show");
     }
   });
   
-  // Close menu after clicking any nav link
   document.querySelectorAll("#navLinks a").forEach(link => {
     link.addEventListener("click", () => {
-      document.getElementById("navLinks").classList.remove("show");
+      nav.classList.remove("show");
     });
   });
-    
  
   document.querySelectorAll('.donut-chart').forEach(chart => {
     const percent = chart.getAttribute('data-percent');
