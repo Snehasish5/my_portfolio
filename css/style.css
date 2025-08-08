@@ -264,7 +264,7 @@ header {
     }
  
     #typing-text {
-      font-size: 0.7rem; /* smaller font on mobile */
+      font-size: 0.9rem; /* smaller font on mobile */
       font-weight: 500;
       font-family: monospace, monospace;
       color: var(--accent, #58e0ef);
@@ -669,7 +669,7 @@ footer .btn:hover {
   .socials {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 8px;
     justify-content: center; /* 👈 centers the icons */
     margin-bottom: 1rem;
   }
