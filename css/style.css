@@ -242,7 +242,7 @@ header {
 
     .navbar .logo h1 {
       font-size: 4rem;
-      margin-left: 4rem; /* increased from 1.2rem */
+      margin-left: 5rem; /* increased from 1.2rem */
       background: linear-gradient(45deg, #58e0ef, #ae69fa);
       background-clip: text;
       -webkit-background-clip: text;
@@ -254,8 +254,13 @@ header {
     flex-direction: column;
     text-align: center;
   }
+  
+  .hero-content p{
+    flex-direction: column;
+    text-align: justify;
+  }
 
-  .hero-img {
+    .hero-img {
     order: -1; /* Image comes first */
     margin-bottom: -1rem;
   }
@@ -273,7 +278,8 @@ header {
       margin-top: 0; /* add some spacing from content above */
       margin-bottom: -5rem;
     }
-  
+
+     
     .hero-content .socials a {
       color: #22b4dd;
       text-decoration: none;
@@ -407,8 +413,8 @@ header {
   }
 
   .stat-box {
-    width: 160px;
-    height: 160px;           /* Make height = width for perfect circle */
+    width: 180px;
+    height: 200px;           /* Make height = width for perfect circle */
     padding: 1rem;
     border-radius: 50%;      /* Makes the box circular */
     display: flex;           /* Flex to center content */
