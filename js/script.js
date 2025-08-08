@@ -29,38 +29,32 @@ document.getElementById("toggleMode").addEventListener("click", () => {
     });
   });
 
-  const nav = document.getElementById("navLinks");
-const hamburger = document.querySelector(".hamburger");
-
-function toggleMenu() {
-  nav.classList.toggle("show");
-}
-
-// Toggle menu when hamburger is clicked
-hamburger.addEventListener("click", function(event) {
-  toggleMenu();
-  event.stopPropagation(); // prevent document click listener from immediately closing menu
-});
-
-// Prevent clicks inside the nav from closing the menu
-nav.addEventListener("click", function(event) {
-  event.stopPropagation();
-});
-
-// Close the menu when clicking outside nav or hamburger
-document.addEventListener("click", function() {
-  if (nav.classList.contains("show")) {
-    nav.classList.remove("show");
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    if (nav) {
+      nav.classList.toggle("show");
+    }
   }
-});
 
-// Close menu when any nav link is clicked
-document.querySelectorAll("#navLinks a").forEach(link => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("show");
+  let lastScrollTop = 0;
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+      // Scrolling down - show navbar
+      navbar.style.top = '0';
+      navbar.style.position = 'fixed';
+      navbar.style.width = '100%';
+      navbar.style.transition = 'top 0.3s';
+      } else {
+      // Scrolling up - hide navbar
+      navbar.style.top = '-80px'; // adjust height to hide fully
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
   });
-});
- 
+
   document.querySelectorAll('.donut-chart').forEach(chart => {
     const percent = chart.getAttribute('data-percent');
     const circle = chart.querySelector('.circle');

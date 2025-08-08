@@ -318,6 +318,7 @@ header {
       margin-left: 1rem; /* remove left margin on mobile */
       padding-left: 0;
       margin-top: 0; /* add some spacing from content above */
+      margin-bottom: -3rem;
     }
   
     .hero-content .socials a {
