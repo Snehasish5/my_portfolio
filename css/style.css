@@ -270,7 +270,7 @@ header {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: rgba(20,20,20,0.95);
+    background: rgba(20, 20, 20, 0.95);
     position: absolute;
     top: 4rem;
     right: 1rem;
@@ -284,15 +284,21 @@ header {
 
   .hamburger {
     display: flex;
+    cursor: pointer;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img {
+    order: -1; /* Image comes first */
+    margin-bottom: 1rem;
   }
 
   .hero-img img {
     width: 200px;
-  }
-  
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
   }
 }
 
