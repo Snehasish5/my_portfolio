@@ -47,15 +47,18 @@ document.getElementById("toggleMode").addEventListener("click", () => {
   });
 
   document.addEventListener("DOMContentLoaded", () => {
-    const typingElement = document.getElementById("typing");
-    const text = "A Full Stack Developer & Data Analyst";
+    const typingElement = document.getElementById("typing-text");
+    const originalText = typingElement.textContent.trim();
     const glitchChars = "!@#$%^&*<>?/\\|{}[]~";
     let index = 0;
-
+  
+    // Clear the original text before typing
+    typingElement.textContent = "";
+  
     function glitchEffect(finalChar, callback) {
       let glitchCount = 0;
       const maxGlitches = 5;
-
+  
       function glitch() {
         if (glitchCount < maxGlitches) {
           const randChar = glitchChars.charAt(Math.floor(Math.random() * glitchChars.length));
@@ -75,20 +78,19 @@ document.getElementById("toggleMode").addEventListener("click", () => {
           callback();
         }
       }
-
+  
       glitch();
     }
-
+  
     function type() {
-      if (index < text.length) {
+      if (index < originalText.length) {
         typingElement.textContent += "_";
-        glitchEffect(text.charAt(index), () => {
+        glitchEffect(originalText.charAt(index), () => {
           index++;
           setTimeout(type, 150);
         });
       }
     }
-
-    typingElement.textContent = "";
+  
     type();
-  });
+  });  

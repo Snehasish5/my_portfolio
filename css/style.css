@@ -174,20 +174,22 @@ header {
   color: #ffcc00;
 }
 
-.typing {
+#typing-text {
   font-size: 2rem;
   font-weight: 500;
+  font-family: monospace, monospace;
+  color: var(--accent, #58e0ef);
   white-space: nowrap;
+  border-right: 2px solid var(--accent, #58e0ef);
+  animation: blinkCursor 1s steps(1) infinite;
   overflow: hidden;
-  border-right: 2px solid #58e0ef;
-  animation: blinkCursor 2s steps(1) infinite;
   display: inline-block;
   min-height: 2.4rem;
-  line-height: 1.2;
+  margin: 0;
 }
 
 @keyframes blinkCursor {
-  0%, 50% { border-color: var(--accent); }
+  0%, 50% { border-color: var(--accent, #58e0ef); }
   51%, 100% { border-color: transparent; }
 }
 
