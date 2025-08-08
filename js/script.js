@@ -31,30 +31,56 @@ document.getElementById("toggleMode").addEventListener("click", () => {
 
   function toggleMenu() {
     const nav = document.getElementById("navLinks");
+    const hamburger = document.querySelector(".hamburger");
+  
     if (nav) {
       nav.classList.toggle("show");
+  
+      // Hide hamburger when menu is open
+      if (nav.classList.contains("show")) {
+        hamburger.style.display = "none";
+      } else {
+        hamburger.style.display = "flex";
+      }
     }
   }
-
+  
+  // Hide hamburger when menu is open, and show it again when clicking outside
+  document.addEventListener("click", function (event) {
+    const nav = document.getElementById("navLinks");
+    const hamburger = document.querySelector(".hamburger");
+  
+    if (
+      nav.classList.contains("show") &&
+      !nav.contains(event.target) &&
+      !hamburger.contains(event.target)
+    ) {
+      nav.classList.remove("show");
+      hamburger.style.display = "flex";
+    }
+  });
+  
+  // Sticky navbar: show when scrolling down, hide when scrolling up
   let lastScrollTop = 0;
   const navbar = document.querySelector('.navbar');
-
+  
   window.addEventListener('scroll', () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (scrollTop > lastScrollTop) {
+  
+    if (scrollTop > lastScrollTop) {
       // Scrolling down - show navbar
       navbar.style.top = '0';
       navbar.style.position = 'fixed';
       navbar.style.width = '100%';
       navbar.style.transition = 'top 0.3s';
-      } else {
+    } else {
       // Scrolling up - hide navbar
-      navbar.style.top = '-80px'; // adjust height to hide fully
-      }
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+      navbar.style.top = '-80px';
+    }
+  
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
-
+ 
   document.querySelectorAll('.donut-chart').forEach(chart => {
     const percent = chart.getAttribute('data-percent');
     const circle = chart.querySelector('.circle');
