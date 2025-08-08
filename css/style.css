@@ -269,6 +269,19 @@ header {
       -webkit-text-fill-color: transparent;
     }
  
+    #typing-text {
+      font-size: 1.5rem; /* smaller font on mobile */
+      font-weight: 500;
+      font-family: monospace, monospace;
+      color: var(--accent, #58e0ef);
+      white-space: nowrap;
+      border-right: 2px solid var(--accent, #58e0ef);
+      animation: blinkCursor 1s steps(1) infinite;
+      overflow: hidden;
+      display: inline-block;
+      min-height: 2rem; /* slightly smaller height */
+      margin: 0 1rem; /* some horizontal margin */
+    }
 
   .hero-content {
     flex-direction: column;
