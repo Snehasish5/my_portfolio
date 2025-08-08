@@ -315,9 +315,9 @@ header {
       gap: 1rem; /* keep gaps between icons */
       justify-content: center; /* center the icons horizontally */
       align-items: center;
-      margin-left: 0; /* remove left margin on mobile */
+      margin-left: 1rem; /* remove left margin on mobile */
       padding-left: 0;
-      margin-top: 1rem; /* add some spacing from content above */
+      margin-top: 0; /* add some spacing from content above */
     }
   
     .hero-content .socials a {
