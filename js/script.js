@@ -54,3 +54,21 @@ document.getElementById("toggleMode").addEventListener("click", () => {
       }
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
   });
+
+  document.querySelectorAll('.donut-chart').forEach(chart => {
+    const percent = chart.getAttribute('data-percent');
+    const circle = chart.querySelector('.circle');
+    
+    const totalLength = 100; // your SVG circle total length
+    const offset = totalLength - percent;
+  
+    circle.style.strokeDasharray = totalLength;
+    circle.style.strokeDashoffset = totalLength;
+    
+    // Trigger animation using setTimeout or requestAnimationFrame
+    setTimeout(() => {
+      circle.style.transition = 'stroke-dashoffset 2s ease-in-out';
+      circle.style.strokeDashoffset = offset;
+    }, 100);
+  });
+  
