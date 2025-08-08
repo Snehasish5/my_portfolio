@@ -31,21 +31,12 @@ document.getElementById("toggleMode").addEventListener("click", () => {
 
   function toggleMenu() {
     const nav = document.getElementById("navLinks");
-    const hamburger = document.querySelector(".hamburger");
-  
     if (nav) {
       nav.classList.toggle("show");
-  
-      // Hide hamburger when menu is open
-      if (nav.classList.contains("show")) {
-        hamburger.style.display = "none";
-      } else {
-        hamburger.style.display = "flex";
-      }
     }
   }
   
-  // Hide hamburger when menu is open, and show it again when clicking outside
+  // Close menu when clicking outside or on any nav link
   document.addEventListener("click", function (event) {
     const nav = document.getElementById("navLinks");
     const hamburger = document.querySelector(".hamburger");
@@ -56,30 +47,16 @@ document.getElementById("toggleMode").addEventListener("click", () => {
       !hamburger.contains(event.target)
     ) {
       nav.classList.remove("show");
-      hamburger.style.display = "flex";
     }
   });
   
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("show");
-  }
-  
+  // Close menu after clicking any nav link
   document.querySelectorAll("#navLinks a").forEach(link => {
     link.addEventListener("click", () => {
       document.getElementById("navLinks").classList.remove("show");
     });
   });
-  
-  document.addEventListener("click", (event) => {
-    const nav = document.getElementById("navLinks");
-    const hamburger = document.querySelector(".hamburger");
-  
-    if (nav.classList.contains("show") &&
-        !nav.contains(event.target) &&
-        !hamburger.contains(event.target)) {
-      nav.classList.remove("show");
-    }
-  });  
+    
  
   document.querySelectorAll('.donut-chart').forEach(chart => {
     const percent = chart.getAttribute('data-percent');
