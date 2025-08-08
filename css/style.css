@@ -68,7 +68,7 @@ header {
 }
 
 .navbar .nav-links li a:hover {
-  color: #ef58e5;
+  color: var(--accent);
 }
 
 /* Mobile: hide nav links */
@@ -174,11 +174,28 @@ header {
   color: #ffcc00;
 }
 
+.typing {
+  font-size: 2rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #58e0ef;
+  animation: blinkCursor 2s steps(1) infinite;
+  display: inline-block;
+  min-height: 2.4rem;
+  line-height: 1.2;
+}
+
+@keyframes blinkCursor {
+  0%, 50% { border-color: var(--accent); }
+  51%, 100% { border-color: transparent; }
+}
 
 .hero-text p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  text-align: justify;
 }
 
 .btn {
@@ -204,6 +221,7 @@ header {
   align-items: center;
   margin-left: 10rem; /* shift the whole icons group right */
   /* OR padding-left: 20px; */
+  margin-bottom: -4rem;
 }
 
 .hero-content .socials a {
