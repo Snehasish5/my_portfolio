@@ -71,6 +71,13 @@ header {
   color: #ef58e5;
 }
 
+/* Mobile: hide nav links */
+@media (max-width: 767px) {
+  .navbar .nav-links {
+    display: none;
+  }
+}
+
 /* Hero Section */
 .hero {
   padding: 4rem 2rem;
@@ -261,10 +268,10 @@ header {
       gap: 1rem; /* keep gaps between icons */
       justify-content: center; /* center the icons horizontally */
       align-items: center;
-      margin-left: 1rem; /* remove left margin on mobile */
+      margin-left: 5rem; /* remove left margin on mobile */
       padding-left: 0;
       margin-top: 0; /* add some spacing from content above */
-      margin-bottom: -3rem;
+      margin-bottom: -5rem;
     }
   
     .hero-content .socials a {
