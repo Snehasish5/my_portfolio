@@ -105,7 +105,7 @@ header {
   position: relative;
   display: inline-block;
   perspective: 800px; /* optional, for subtle depth */
-  margin-bottom: 1rem;
+  margin-bottom: 7rem;
   margin-left: 1.5rem;
 }
 
@@ -296,7 +296,7 @@ header {
 
     .hero-img {
     order: -1; /* Image comes first */
-    margin-bottom: -3rem;
+    margin-bottom: -6rem;
   }
 
   .hero-img img {
@@ -724,6 +724,11 @@ footer .btn:hover {
   text-align: center;
   box-shadow: 0 0 15px rgba(106, 105, 105, 0.721);
   transition: transform 0.3s ease;
+}
+
+.skill-card h3{
+  color: #edda8e;
+  text-align: center;
 }
 
 .skill-card:hover {
