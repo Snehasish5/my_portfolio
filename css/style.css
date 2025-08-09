@@ -334,6 +334,12 @@ header {
       box-shadow: 0 0 8px var(--accent);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .download-btn {
+      width: 100%;
+      text-align: center;
+      display: block;
+    }
 }
 
 /* About Section */
