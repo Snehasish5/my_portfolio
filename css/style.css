@@ -794,67 +794,6 @@ footer {
   transform: translateY(-3px); /* slight lift */
 }
 
-
-/* Call to action footer section */
-.footer-call-to-action {
-  border-radius: 100px;
-  padding: 40px 50px;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(159, 158, 158, 0.721);
-  color: var(--text-dark);
-  max-width: 900px;
-  margin: 0 auto;
-  font-weight: 600;
-  user-select: none;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.footer-call-to-action:hover {
-  box-shadow: 0 12px 30px rgba(159, 158, 158, 0.9);
-  transform: translateY(-6px);
-  cursor: pointer;
-}
-
-.footer-call-to-action h2 {
-  font-size: 2.4rem;
-  font-weight: 900;
-  margin-bottom: 15px;
-}
-
-.footer-call-to-action p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
-  font-weight: 600;
-  color: var(--accent);
-}
-
-/* CTA buttons */
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.cta-buttons button {
-  background-color: var(--btn-bg);
-  border: none;
-  color: var(--accent);
-  font-weight: 700;
-  padding: 12px 35px;
-  border-radius: 40px;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(159, 158, 158, 0.721);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta-buttons button:hover {
-  transform: translateY(-10px);
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .footer-contact-section {
@@ -867,27 +806,6 @@ footer {
     max-width: 450px;
   }
   .social-contact-cards {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 767px) {
-  .footer-call-to-action {
-    padding: 25px 20px;
-    border-radius: 60px;
-  }
-  .footer-call-to-action h2 {
-    font-size: 1.8rem;
-  }
-  .footer-call-to-action p {
-    font-size: 1rem;
-  }
-  .cta-buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .cta-buttons button {
-    width: 100%;
     justify-content: center;
   }
 }
