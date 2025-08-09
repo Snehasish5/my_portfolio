@@ -53,30 +53,27 @@ document.getElementById("toggleMode").addEventListener("click", () => {
   
     function scrollProjects(direction) {
       const firstCard = container.querySelector(".project-card");
-      if (!firstCard) return; // safety check
+      if (!firstCard) {
+        console.warn("No project cards found");
+        return;
+      }
   
       const cardStyle = getComputedStyle(firstCard);
-  
-      // Calculate total width including margins + gap (if any)
       const marginRight = parseInt(cardStyle.marginRight) || 0;
       const marginLeft = parseInt(cardStyle.marginLeft) || 0;
-      // You had +32 (2rem) gap added — ensure it matches your CSS gap or margin setup
-      const gap = marginLeft + marginRight; 
+      const gap = marginLeft + marginRight;
   
       const cardWidth = firstCard.offsetWidth + gap;
-  
-      // Scroll amount
       const scrollAmount = direction === "next" ? cardWidth : -cardWidth;
   
+      console.log(`Scrolling ${direction} by ${scrollAmount}px`);
       container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   
-    // Add click listeners safely
     if (prevBtn && nextBtn && container) {
       prevBtn.addEventListener("click", () => scrollProjects("prev"));
       nextBtn.addEventListener("click", () => scrollProjects("next"));
   
-      // Keyboard accessibility
       [prevBtn, nextBtn].forEach(btn => {
         btn.addEventListener("keydown", e => {
           if (e.key === "Enter" || e.key === " ") {
@@ -85,5 +82,7 @@ document.getElementById("toggleMode").addEventListener("click", () => {
           }
         });
       });
+    } else {
+      console.error("One or more required elements are missing: prevBtn, nextBtn, projectsContainer");
     }
   });  
