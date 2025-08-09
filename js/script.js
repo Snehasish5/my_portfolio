@@ -51,24 +51,21 @@ document.getElementById("toggleMode").addEventListener("click", () => {
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
   
-    // Show or hide buttons based on scroll position
     function updateButtonsVisibility() {
-      prevBtn.style.display = container.scrollLeft <= 0 ? "none" : "flex";
-  
+      const tolerance = 2;
       const maxScrollLeft = container.scrollWidth - container.clientWidth;
-      nextBtn.style.display = container.scrollLeft >= maxScrollLeft - 1 ? "none" : "flex";
+  
+      prevBtn.style.display = container.scrollLeft <= tolerance ? "none" : "flex";
+      nextBtn.style.display = container.scrollLeft >= maxScrollLeft - tolerance ? "none" : "flex";
     }
   
-    // Scroll by one card width on button click
     function scrollProjects(direction) {
       const firstCard = container.querySelector(".project-card");
       if (!firstCard) return;
   
-      const cardStyle = getComputedStyle(firstCard);
-      const marginRight = parseInt(cardStyle.marginRight) || 0;
-      const marginLeft = parseInt(cardStyle.marginLeft) || 0;
-      const gap = marginLeft + marginRight;
-  
+      const containerStyle = getComputedStyle(container);
+      const gap = parseInt(containerStyle.columnGap) || 0; // Assuming horizontal gap
+      
       const cardWidth = firstCard.offsetWidth + gap;
       const scrollAmount = direction === "next" ? cardWidth : -cardWidth;
   
@@ -79,7 +76,6 @@ document.getElementById("toggleMode").addEventListener("click", () => {
       prevBtn.addEventListener("click", () => scrollProjects("prev"));
       nextBtn.addEventListener("click", () => scrollProjects("next"));
   
-      // Keyboard accessibility
       [prevBtn, nextBtn].forEach(btn => {
         btn.addEventListener("keydown", e => {
           if (e.key === "Enter" || e.key === " ") {
@@ -90,8 +86,6 @@ document.getElementById("toggleMode").addEventListener("click", () => {
       });
   
       container.addEventListener("scroll", updateButtonsVisibility);
-  
-      // Initial check to hide/show buttons
       updateButtonsVisibility();
     }
   });  
