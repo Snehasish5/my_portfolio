@@ -558,58 +558,72 @@ header {
   opacity: 0.8;
   transition: opacity 0.4s ease, transform 0.3s ease;
   z-index: 10;
-  pointer-events: auto; /* ensure clickable */
+  pointer-events: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  clip-path: polygon(0 50%, 100% 0, 100% 100%);
   user-select: none;
   outline: none;
+  border-radius: 4px;
 }
 
+/* Arrow shapes using clip-path */
+.projects-nav.left {
+  left: -50px;
+  --rotate: 180deg;
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+  transform: rotate(var(--rotate));
+}
+
+.projects-nav.right {
+  right: -50px;
+  --rotate: 180deg;
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  transform: rotate(var(--rotate));
+}
+
+/* Add arrow icons using ::before */
+.projects-nav::before {
+  content: '';
+  display: inline-block;
+  border-style: solid;
+  border-width: 8px 6px 8px 0;
+  border-color: transparent white transparent transparent;
+  transform: translateX(2px);
+}
+
+.projects-nav.left::before {
+  border-width: 8px 0 8px 6px;
+  border-color: transparent transparent transparent white;
+  transform: translateX(-2px);
+}
+
+/* Focus outline */
 .projects-nav:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
 
-/* Fix hover: keep rotate + translateY */
+/* Hover effect: translateY and keep rotation */
 .projects-nav:hover {
-  opacity: 1; /* max opacity */
-  transform: translateY(-10px) rotate(var(--rotate, 0deg));
+  opacity: 1;
+  transform: translateY(-10px) rotate(var(--rotate));
 }
 
-/* Left button */
-.projects-nav.left {
-  left: -50px; /* changed from -50px for better visibility */
-  --rotate: 180deg;  /* custom property for rotation */
-  transform: rotate(var(--rotate));
-  clip-path: polygon(100% 50%, 0 0, 0 100%);
-}
-
-/* Right button */
-.projects-nav.right {
-  right: -50px; /* changed from -50px */
-  --rotate: 180deg; /* no rotation */
-  transform: rotate(var(--rotate));
-  clip-path: polygon(0 50%, 100% 0, 100% 100%);
-}
-
-/* MOBILE: show only 1 project, flex basis 100% */
+/* MOBILE: adjust container width and buttons position */
 @media (max-width: 767px) {
   .projects-container {
-    width: 280px;   /* full width */
+    width: 280px;
     max-width: none;
   }
   .project-card {
     flex: 0 0 100%;
   }
-
   .projects-nav.left {
-    left: 10px;
+    left: 7px;
   }
-
   .projects-nav.right {
-    right: 10px;
+    right: 7px;
   }
 }
 

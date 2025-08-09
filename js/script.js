@@ -46,39 +46,46 @@ document.getElementById("toggleMode").addEventListener("click", () => {
     }, 100);
   });
 
-  const projectsContainer = document.querySelector('.projects-container');
-const btnLeft = document.querySelector('.projects-nav.left');
-const btnRight = document.querySelector('.projects-nav.right');
-
-if (projectsContainer && btnLeft && btnRight) {
-  const scrollAmount = projectsContainer.clientWidth * 0.7;
-
-  // Update buttons disabled state depending on scroll position
-  function updateButtons() {
-    btnLeft.disabled = projectsContainer.scrollLeft <= 0;
-    btnRight.disabled = projectsContainer.scrollLeft + projectsContainer.clientWidth >= projectsContainer.scrollWidth;
-    
-    btnLeft.style.opacity = btnLeft.disabled ? '0.3' : '0.8';
-    btnRight.style.opacity = btnRight.disabled ? '0.3' : '0.8';
-    btnLeft.style.cursor = btnLeft.disabled ? 'default' : 'pointer';
-    btnRight.style.cursor = btnRight.disabled ? 'default' : 'pointer';
-  }
-
-  // Initial check
-  updateButtons();
-
-  btnLeft.addEventListener('click', () => {
-    if (!btnLeft.disabled) {
+  document.addEventListener('DOMContentLoaded', () => {
+    const projectsContainer = document.getElementById('projectsContainer');
+    const btnLeft = document.getElementById('prevBtn');
+    const btnRight = document.getElementById('nextBtn');
+  
+    if (!projectsContainer || !btnLeft || !btnRight) {
+      console.error('Missing projects container or buttons');
+      return;
+    }
+  
+    // Scroll amount per click - about 80% of container width
+    const scrollAmount = projectsContainer.clientWidth * 0.8;
+  
+    function updateButtons() {
+      btnLeft.style.opacity = projectsContainer.scrollLeft <= 0 ? '0.3' : '0.8';
+      btnLeft.style.pointerEvents = projectsContainer.scrollLeft <= 0 ? 'none' : 'auto';
+  
+      btnRight.style.opacity = projectsContainer.scrollLeft + projectsContainer.clientWidth >= projectsContainer.scrollWidth - 1 ? '0.3' : '0.8';
+      btnRight.style.pointerEvents = projectsContainer.scrollLeft + projectsContainer.clientWidth >= projectsContainer.scrollWidth - 1 ? 'none' : 'auto';
+    }
+  
+    updateButtons();
+  
+    btnLeft.addEventListener('click', () => {
       projectsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    }
-  });
-
-  btnRight.addEventListener('click', () => {
-    if (!btnRight.disabled) {
+    });
+  
+    btnRight.addEventListener('click', () => {
       projectsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  });
-
-  // Update buttons on scroll
-  projectsContainer.addEventListener('scroll', updateButtons);
-}
+    });
+  
+    projectsContainer.addEventListener('scroll', updateButtons);
+  
+    // Optional: allow keyboard activation on Enter or Space
+    [btnLeft, btnRight].forEach(btn => {
+      btn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    });
+  });  
