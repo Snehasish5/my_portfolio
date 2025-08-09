@@ -296,7 +296,7 @@ header {
 
     .hero-img {
     order: -1; /* Image comes first */
-    margin-bottom: -6rem;
+    margin-bottom: -10rem;
   }
 
   .hero-img img {
