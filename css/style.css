@@ -105,7 +105,7 @@ header {
   position: relative;
   display: inline-block;
   perspective: 800px; /* optional, for subtle depth */
-  margin-bottom: 7rem;
+  margin-bottom: 3rem;
   margin-left: 1.5rem;
 }
 
@@ -629,7 +629,7 @@ header {
 
 footer {
   color: var(--accent);
-  padding: 40px 20px 60px;
+  padding: 30px 15px 50px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0 4px 20px rgba(159, 158, 158, 0.721);
 }
@@ -735,6 +735,24 @@ footer {
   cursor: pointer;
 }
 
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--accent, #0077b6);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+}
+
+.icon-circle img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 /* Social cards container */
 .social-contact-cards {
   display: flex;
@@ -765,10 +783,15 @@ footer {
 
 
 /* Social card texts */
-.social-card h4 {
+.social-contact-cards h4 {
+  color: var(--accent);
+  padding: 5px 20px;
+  border-radius: 30px;
   font-weight: 700;
-  font-size: 1.2rem;
-  margin: 0;
+  box-shadow: 0 4px 10px rgba(159, 158, 158, 0.721);
+  margin-bottom: 15px;
+  user-select: none;
+  text-align: center;
 }
 
 .social-card p {
@@ -782,16 +805,12 @@ footer {
   border: none;
   color: var(--accent);
   font-weight: 700;
-  padding: 10px 30px;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(159, 158, 158, 0.721);
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .social-card button:hover {
-  box-shadow: 0 6px 18px rgba(159, 158, 158, 0.721); /* stronger shadow */
   transform: translateY(-3px); /* slight lift */
+  color: #0d47a1; /* new hover text color */
 }
 
 /* Responsive adjustments */
