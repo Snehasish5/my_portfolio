@@ -51,15 +51,15 @@ document.getElementById("toggleMode").addEventListener("click", () => {
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
   
+    // Show or hide buttons based on scroll position
     function updateButtonsVisibility() {
-      // ScrollLeft = 0 means start
       prevBtn.style.display = container.scrollLeft <= 0 ? "none" : "flex";
   
-      // scrollWidth - scrollLeft - clientWidth close to 0 means end
       const maxScrollLeft = container.scrollWidth - container.clientWidth;
       nextBtn.style.display = container.scrollLeft >= maxScrollLeft - 1 ? "none" : "flex";
     }
   
+    // Scroll by one card width on button click
     function scrollProjects(direction) {
       const firstCard = container.querySelector(".project-card");
       if (!firstCard) return;
@@ -89,10 +89,9 @@ document.getElementById("toggleMode").addEventListener("click", () => {
         });
       });
   
-      // Update button visibility on scroll
       container.addEventListener("scroll", updateButtonsVisibility);
   
-      // Initial check
+      // Initial check to hide/show buttons
       updateButtonsVisibility();
     }
   });  
