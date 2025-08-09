@@ -567,7 +567,8 @@ header {
 /* MOBILE: show only 1 project, flex basis 100% */
 @media (max-width: 767px) {
   .projects-container {
-    max-width: 100%;
+    width: 100%;   /* full width */
+    max-width: none;
   }
   .project-card {
     flex: 0 0 100%;
