@@ -291,7 +291,7 @@ header {
   .hero-content p{
     flex-direction: column;
     margin-right: 2rem;
-    text-align: left;
+    text-align: justify;
   }
 
     .hero-img {
