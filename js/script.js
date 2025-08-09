@@ -46,27 +46,44 @@ document.getElementById("toggleMode").addEventListener("click", () => {
     }, 100);
   });
 
-  const container = document.getElementById("projectsContainer");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-
-function scrollProjects(direction) {
-  const cardStyle = getComputedStyle(container.querySelector(".project-card"));
-  const gap = parseInt(cardStyle.marginRight || 0) + parseInt(cardStyle.marginLeft || 0) + 32; // gap ~ 2rem (32px)
-  const cardWidth = container.querySelector(".project-card").offsetWidth + gap;
-  const scrollAmount = direction === "next" ? cardWidth : -cardWidth;
-  container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-}
-
-prevBtn.addEventListener("click", () => scrollProjects("prev"));
-nextBtn.addEventListener("click", () => scrollProjects("next"));
-
-// Optional: add keyboard accessibility for buttons
-[prevBtn, nextBtn].forEach(btn => {
-  btn.addEventListener("keydown", e => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      btn.click();
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("projectsContainer");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+  
+    function scrollProjects(direction) {
+      const firstCard = container.querySelector(".project-card");
+      if (!firstCard) return; // safety check
+  
+      const cardStyle = getComputedStyle(firstCard);
+  
+      // Calculate total width including margins + gap (if any)
+      const marginRight = parseInt(cardStyle.marginRight) || 0;
+      const marginLeft = parseInt(cardStyle.marginLeft) || 0;
+      // You had +32 (2rem) gap added — ensure it matches your CSS gap or margin setup
+      const gap = marginLeft + marginRight; 
+  
+      const cardWidth = firstCard.offsetWidth + gap;
+  
+      // Scroll amount
+      const scrollAmount = direction === "next" ? cardWidth : -cardWidth;
+  
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
-  });
-});
+  
+    // Add click listeners safely
+    if (prevBtn && nextBtn && container) {
+      prevBtn.addEventListener("click", () => scrollProjects("prev"));
+      nextBtn.addEventListener("click", () => scrollProjects("next"));
+  
+      // Keyboard accessibility
+      [prevBtn, nextBtn].forEach(btn => {
+        btn.addEventListener("keydown", e => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            btn.click();
+          }
+        });
+      });
+    }
+  });  

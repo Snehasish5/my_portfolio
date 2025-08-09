@@ -545,6 +545,7 @@ header {
   opacity: 0.8;
   transition: opacity 0.4s ease;
   z-index: 10;
+  pointer-events: auto; /* ensure clickable */
 }
 
 .projects-nav:hover {
