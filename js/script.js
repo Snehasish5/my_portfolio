@@ -46,20 +46,39 @@ document.getElementById("toggleMode").addEventListener("click", () => {
     }, 100);
   });
 
-  // Select the container and nav buttons
-const projectsContainer = document.querySelector('.projects-container');
+  const projectsContainer = document.querySelector('.projects-container');
 const btnLeft = document.querySelector('.projects-nav.left');
 const btnRight = document.querySelector('.projects-nav.right');
 
 if (projectsContainer && btnLeft && btnRight) {
-  // Amount to scroll on each click (you can adjust this)
   const scrollAmount = projectsContainer.clientWidth * 0.7;
 
+  // Update buttons disabled state depending on scroll position
+  function updateButtons() {
+    btnLeft.disabled = projectsContainer.scrollLeft <= 0;
+    btnRight.disabled = projectsContainer.scrollLeft + projectsContainer.clientWidth >= projectsContainer.scrollWidth;
+    
+    btnLeft.style.opacity = btnLeft.disabled ? '0.3' : '0.8';
+    btnRight.style.opacity = btnRight.disabled ? '0.3' : '0.8';
+    btnLeft.style.cursor = btnLeft.disabled ? 'default' : 'pointer';
+    btnRight.style.cursor = btnRight.disabled ? 'default' : 'pointer';
+  }
+
+  // Initial check
+  updateButtons();
+
   btnLeft.addEventListener('click', () => {
-    projectsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    if (!btnLeft.disabled) {
+      projectsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
   });
 
   btnRight.addEventListener('click', () => {
-    projectsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    if (!btnRight.disabled) {
+      projectsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
   });
+
+  // Update buttons on scroll
+  projectsContainer.addEventListener('scroll', updateButtons);
 }
