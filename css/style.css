@@ -456,14 +456,14 @@ header {
 
   .stat-box {
     width: 180px;
-    height: 200px;           /* Make height = width for perfect circle */
-    padding: 1rem;
-    border-radius: 50%;      /* Makes the box circular */
-    display: flex;           /* Flex to center content */
+    height: 180px;          /* Same as width for a perfect circle */
+    border-radius: 50%;     /* Fully round */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;  /* Include padding in size */
+    box-sizing: border-box; /* Keeps border & padding inside the size */
+    padding: 0.5rem;        /* Small padding so it stays round */
   }
 
   .stat-box h3 {
