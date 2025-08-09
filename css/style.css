@@ -42,8 +42,8 @@ header {
 /* Logo styling with gradient text */
 .navbar .logo h1 {
   font-size: 4rem;
-  margin-left: 2.5rem;
-  background: linear-gradient(45deg, #58e0ef, #ae69fa);
+  margin-left: 2.1rem;
+  background: linear-gradient(45deg, #58e0ef, #994aed);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,14 +61,20 @@ header {
 
 /* Nav link anchors */
 .navbar .nav-links li a {
-  color: #58e0ef;
-  text-decoration: none;
+  background: linear-gradient(45deg, #58e0ef, #994aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .navbar .nav-links li a:hover {
+  background: none; /* Remove gradient */
+  -webkit-text-fill-color: var(--accent); /* Solid color */
   color: var(--accent);
+  text-decoration: none; /* ensures no underline */
 }
 
 /* Mobile: hide nav links */
@@ -99,6 +105,8 @@ header {
   position: relative;
   display: inline-block;
   perspective: 800px; /* optional, for subtle depth */
+  margin-bottom: 6rem;
+  margin-left: 1.5rem;
 }
 
 .hero-img .img-card::before {
@@ -257,7 +265,7 @@ header {
     .navbar .logo h1 {
       font-size: 4rem;
       margin-left: 5rem; /* increased from 1.2rem */
-      background: linear-gradient(45deg, #58e0ef, #ae69fa);
+      background: linear-gradient(45deg, #58e0ef, #994aed);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -338,7 +346,7 @@ header {
 .about-wrapper {
   max-width: 1000px;
   margin: 0 auto;
-  color: #58e0ef;
+  color: var(--accent);
 }
 
 .about-container h2 {
@@ -690,7 +698,7 @@ footer .btn:hover {
   font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #58e0ef;
+  color: var(--accent);
 }
 
 .section p {
@@ -750,7 +758,7 @@ footer .btn:hover {
 #professional-skills h2 {
   font-size: 2.2rem;
   margin-bottom: 2rem;
-  color: #58e0ef;
+  color: var(--accent);
 }
 
 .donut-charts {
