@@ -224,6 +224,7 @@ header {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: -4rem;
+  margin-left: 0.5rem;
 }
 
 .hero-content .socials a {
@@ -482,21 +483,28 @@ header {
 
 .projects-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;   /* No wrapping, so horizontal scroll possible */
+  overflow: auto;    /* hide overflow for scrolling effect */
+  padding: 1rem;
   gap: 2rem;
   margin-top: 2rem;
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 960px; /* container max width */
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; /* for buttons positioning */
 }
 
+/* On desktop show 3 cards width */
 .project-card {
+  flex: 0 0 calc((100% - 4rem) / 3); /* three cards width with gap */
   background: var(--card-bg);
   border-radius: 10px;
   padding: 1rem;
-  width: 300px;
   box-shadow: 0 0 12px rgba(159, 158, 158, 0.721);
-  gap: 3rem;
   text-align: center;
-  transition: transform 0.4s ease
+  transition: transform 0.4s ease;
 }
 
 .project-card:hover {
@@ -519,8 +527,59 @@ header {
   text-decoration: none;
 }
 
-.project-card a :hover{
-  transform: translateY(-10px);;
+.project-card a:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+}
+
+/* Navigation buttons */
+.projects-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.4s ease;
+  z-index: 10;
+}
+
+.projects-nav:hover {
+  opacity: 2;
+  transform: translateY(-10px);
+}
+
+.projects-nav.left {
+  left: -50px;
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+  transform: rotate(180deg);
+}
+
+.projects-nav.right {
+  right: -50px;
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  transform: rotate(180deg);
+}
+
+/* MOBILE: show only 1 project, flex basis 100% */
+@media (max-width: 767px) {
+  .projects-container {
+    max-width: 100%;
+  }
+  .project-card {
+    flex: 0 0 100%;
+  }
+
+  .projects-nav.left {
+    left: 10px;
+  }
+
+  .projects-nav.right {
+    right: 10px;
+  }
 }
 
 /* Footer styling */

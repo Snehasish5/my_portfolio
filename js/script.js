@@ -45,3 +45,28 @@ document.getElementById("toggleMode").addEventListener("click", () => {
       circle.style.strokeDashoffset = offset;
     }, 100);
   });
+
+  const container = document.getElementById("projectsContainer");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+function scrollProjects(direction) {
+  const cardStyle = getComputedStyle(container.querySelector(".project-card"));
+  const gap = parseInt(cardStyle.marginRight || 0) + parseInt(cardStyle.marginLeft || 0) + 32; // gap ~ 2rem (32px)
+  const cardWidth = container.querySelector(".project-card").offsetWidth + gap;
+  const scrollAmount = direction === "next" ? cardWidth : -cardWidth;
+  container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+}
+
+prevBtn.addEventListener("click", () => scrollProjects("prev"));
+nextBtn.addEventListener("click", () => scrollProjects("next"));
+
+// Optional: add keyboard accessibility for buttons
+[prevBtn, nextBtn].forEach(btn => {
+  btn.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      btn.click();
+    }
+  });
+});
