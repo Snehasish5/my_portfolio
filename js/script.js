@@ -51,12 +51,18 @@ document.getElementById("toggleMode").addEventListener("click", () => {
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
   
+    function updateButtonsVisibility() {
+      // ScrollLeft = 0 means start
+      prevBtn.style.display = container.scrollLeft <= 0 ? "none" : "flex";
+  
+      // scrollWidth - scrollLeft - clientWidth close to 0 means end
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+      nextBtn.style.display = container.scrollLeft >= maxScrollLeft - 1 ? "none" : "flex";
+    }
+  
     function scrollProjects(direction) {
       const firstCard = container.querySelector(".project-card");
-      if (!firstCard) {
-        console.warn("No project cards found");
-        return;
-      }
+      if (!firstCard) return;
   
       const cardStyle = getComputedStyle(firstCard);
       const marginRight = parseInt(cardStyle.marginRight) || 0;
@@ -66,7 +72,6 @@ document.getElementById("toggleMode").addEventListener("click", () => {
       const cardWidth = firstCard.offsetWidth + gap;
       const scrollAmount = direction === "next" ? cardWidth : -cardWidth;
   
-      console.log(`Scrolling ${direction} by ${scrollAmount}px`);
       container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   
@@ -74,6 +79,7 @@ document.getElementById("toggleMode").addEventListener("click", () => {
       prevBtn.addEventListener("click", () => scrollProjects("prev"));
       nextBtn.addEventListener("click", () => scrollProjects("next"));
   
+      // Keyboard accessibility
       [prevBtn, nextBtn].forEach(btn => {
         btn.addEventListener("keydown", e => {
           if (e.key === "Enter" || e.key === " ") {
@@ -82,7 +88,11 @@ document.getElementById("toggleMode").addEventListener("click", () => {
           }
         });
       });
-    } else {
-      console.error("One or more required elements are missing: prevBtn, nextBtn, projectsContainer");
+  
+      // Update button visibility on scroll
+      container.addEventListener("scroll", updateButtonsVisibility);
+  
+      // Initial check
+      updateButtonsVisibility();
     }
   });  
