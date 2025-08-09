@@ -105,7 +105,7 @@ header {
   position: relative;
   display: inline-block;
   perspective: 800px; /* optional, for subtle depth */
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
   margin-left: 1.5rem;
 }
 
