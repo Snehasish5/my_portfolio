@@ -290,7 +290,8 @@ header {
   
   .hero-content p{
     flex-direction: column;
-    margin-right: 0.9rem;
+    margin-right: 0.3rem;
+    margin-left: -0.2rem;
     text-align: justify;
   }
 
