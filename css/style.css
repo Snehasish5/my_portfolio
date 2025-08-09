@@ -306,7 +306,7 @@ header {
       gap: 1rem; /* keep gaps between icons */
       justify-content: center; /* center the icons horizontally */
       align-items: center;
-      margin-left: 4.9rem; /* remove left margin on mobile */
+      margin-left: 5.1rem; /* remove left margin on mobile */
       padding-left: 0;
       margin-top: 0; /* add some spacing from content above */
       margin-bottom: -5rem;
