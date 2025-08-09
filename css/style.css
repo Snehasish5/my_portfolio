@@ -455,25 +455,27 @@ header {
   }
 
   .stat-box {
-    width: 180px;
-    height: 180px;          /* Same as width for a perfect circle */
-    border-radius: 50%;     /* Fully round */
+    width: 160px;              /* Slightly smaller for mobile */
+    aspect-ratio: 1 / 1;       /* Keeps width & height equal */
+    border-radius: 50%;        /* Perfect circle */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box; /* Keeps border & padding inside the size */
-    padding: 0.5rem;        /* Small padding so it stays round */
+    box-sizing: border-box;
+    padding: 0.5rem;
   }
 
   .stat-box h3 {
     font-size: 1rem;
     margin: 0;
+    text-align: center;
   }
 
   .stat-box p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin: 0;
+    font-weight: bold;
   }
 }
 
