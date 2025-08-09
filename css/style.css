@@ -223,8 +223,6 @@ header {
   gap: 1rem; /* keep gaps between icons */
   justify-content: flex-start;
   align-items: center;
-  margin-left: 10rem; /* shift the whole icons group right */
-  /* OR padding-left: 20px; */
   margin-bottom: -4rem;
 }
 
@@ -374,22 +372,24 @@ header {
   margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
   justify-content: center;
 }
 
 .download-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 14px 24px;
+  background-color: var(--accent);
+  color: rgb(11, 11, 11);
+  padding: 10px 20px;
   border-radius: 8px;
   font-size: 16px;
   text-decoration: none;
+  font-weight: 500;
   transition: background-color 0.3s ease;
+  gap: none;
 }
 
 .download-btn:hover {
-  background-color: #0056b3;
+  background-color: #4409f4;
 }
 
 /* Responsive */
@@ -550,7 +550,7 @@ footer .footer-contact {
 
 footer .footer-contact h2 {
   font-size: 2em;
-  color: #58e0ef;
+  color: var(--accent);
   margin-bottom: 10px;
 }
 
