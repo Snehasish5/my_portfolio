@@ -46,46 +46,20 @@ document.getElementById("toggleMode").addEventListener("click", () => {
     }, 100);
   });
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById("projectsContainer");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-  
-    function updateButtonsVisibility() {
-      const tolerance = 2;
-      const maxScrollLeft = container.scrollWidth - container.clientWidth;
-  
-      prevBtn.style.display = container.scrollLeft <= tolerance ? "none" : "flex";
-      nextBtn.style.display = container.scrollLeft >= maxScrollLeft - tolerance ? "none" : "flex";
-    }
-  
-    function scrollProjects(direction) {
-      const firstCard = container.querySelector(".project-card");
-      if (!firstCard) return;
-  
-      const containerStyle = getComputedStyle(container);
-      const gap = parseInt(containerStyle.columnGap) || 0; // Assuming horizontal gap
-      
-      const cardWidth = firstCard.offsetWidth + gap;
-      const scrollAmount = direction === "next" ? cardWidth : -cardWidth;
-  
-      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-  
-    if (prevBtn && nextBtn && container) {
-      prevBtn.addEventListener("click", () => scrollProjects("prev"));
-      nextBtn.addEventListener("click", () => scrollProjects("next"));
-  
-      [prevBtn, nextBtn].forEach(btn => {
-        btn.addEventListener("keydown", e => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            btn.click();
-          }
-        });
-      });
-  
-      container.addEventListener("scroll", updateButtonsVisibility);
-      updateButtonsVisibility();
-    }
-  });  
+  // Select the container and nav buttons
+const projectsContainer = document.querySelector('.projects-container');
+const btnLeft = document.querySelector('.projects-nav.left');
+const btnRight = document.querySelector('.projects-nav.right');
+
+if (projectsContainer && btnLeft && btnRight) {
+  // Amount to scroll on each click (you can adjust this)
+  const scrollAmount = projectsContainer.clientWidth * 0.7;
+
+  btnLeft.addEventListener('click', () => {
+    projectsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  btnRight.addEventListener('click', () => {
+    projectsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+}
