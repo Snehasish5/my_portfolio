@@ -191,49 +191,50 @@
 
   </section>
   
-   <!-- Projects Section -->
-   <section id="projects" class="section">
+  <section id="projects" class="section">
     <h2 align="center">Projects</h2>
-    <br>
-    <div class="projects-wrapper" style="position: relative; max-width: 960px; margin: auto;">
+    <div class="projects-wrapper">
+      <!-- Navigation buttons -->
+      <div class="projects-nav left" onclick="prevSlide()">&#9664;</div>
+  
       <div class="projects-container" id="projectsContainer">
-    
         <!-- Project 1 -->
         <div class="project-card">
           <img src="images/ecom.png" alt="Portfolio Website" />
           <h3>Personal Ecommerce Website</h3>
-          <p>A modern responsive Ecommerce website built using Python, Flask, MySQL, HTML, CSS, JavaScript and Razarpay API to showcase my work.</p>
-          <a href="https://drive.google.com/file/d/10YfQXzpfJB7VcLvA3WcViN4pYUic6qcP/view?usp=sharing" target="_blank">Live Demo</a><br/>
-          <a href="https://github.com/Snehasish5/Ecommerce_app" target="_blank">GitHub</a>
+          <p>A modern responsive Ecommerce website built using Python, Flask, MySQL, HTML, CSS, JavaScript, and Razorpay API.</p>
+          <div class="project-buttons">
+            <a href="https://drive.google.com/file/d/10YfQXzpfJB7VcLvA3WcViN4pYUic6qcP/view?usp=sharing" class="btn live-btn" target="_blank">Live View</a>
+            <a href="https://github.com/Snehasish5/Ecommerce_app" class="btn github-btn" target="_blank">GitHub</a>
+          </div>
         </div>
-    
+  
         <!-- Project 2 -->
         <div class="project-card">
           <img src="images/forecast.png" alt="Data Dashboard" />
           <h3>Sales Data Dashboard</h3>
-          <p>A Sales Forecasting Dashboard built with Python and Streamlit to predict sales and analyze profits by region using Superstore data.</p>
-          <a href="https://salesforecastdashboard-3marsux6bmjuyxkgzegmzc.streamlit.app/" target="_blank">View Dashboard</a><br/>
-          <a href="https://github.com/Snehasish5/Sales_Forecast_Dashboard" target="_blank">GitHub</a>
+          <p>Built with Python and Streamlit to predict sales and analyze profits by region.</p>
+          <div class="project-buttons">
+            <a href="https://salesforecastdashboard-3marsux6bmjuyxkgzegmzc.streamlit.app/" class="btn live-btn" target="_blank">Live View</a>
+            <a href="https://github.com/Snehasish5/Sales_Forecast_Dashboard" class="btn github-btn" target="_blank">GitHub</a>
+          </div>
         </div>
-    
+  
         <!-- Project 3 -->
         <div class="project-card">
           <img src="images/chat-app.jpg" alt="Chat App" />
           <h3>Real-Time Chat App</h3>
           <p>Flask + Socket.IO based chat app with user authentication and live messaging.</p>
-          <a href="#">Live Demo</a>
-          <a href="#">GitHub</a>
+          <div class="project-buttons">
+            <a href="https://your-chat-app-live-link.com" class="btn live-btn" target="_blank">Live View</a>
+            <a href="https://github.com/YourUsername/YourChatAppRepo" class="btn github-btn" target="_blank">GitHub</a>
+          </div>
         </div>
-    
       </div>
-    
-      <!-- Navigation buttons -->
-      <div class="projects-nav left" id="prevBtn" aria-label="Previous projects" role="button" onclick="prevSlide()" tabindex="0">&#9664;</div>  <!-- ◄ -->
-      <div class="projects-nav right" id="nextBtn" aria-label="Next projects" role="button" onclick="nextSlide()" tabindex="0">&#9654;</div>  <!-- ► -->
-
+  
+      <div class="projects-nav right" onclick="nextSlide()">&#9654;</div>
     </div>
   </section>
-    
 <br>
 <br>
 <footer>
@@ -287,4 +288,28 @@
   </div>
 </footer>   
 </body>
+<script>
+
+  const slider = document.getElementById('projectsContainer');
+const totalSlides = slider.children.length;
+let currentIndex = 0;
+
+function updateSlide() {
+slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+if (currentIndex < totalSlides - 1) {
+  currentIndex++;
+  updateSlide();
+}
+}
+
+function prevSlide() {
+if (currentIndex > 0) {
+  currentIndex--;
+  updateSlide();
+}
+}
+</script>
 </html>

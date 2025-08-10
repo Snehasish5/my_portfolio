@@ -370,12 +370,6 @@ header {
   text-align: justify;
 }
 
-.scroll-note {
-  font-style: italic;
-  color: #999;
-  font-size: 16px;
-}
-
 /* Download Section */
 .download-section {
   margin-top: 40px;
@@ -481,37 +475,26 @@ header {
   }
 }
 
+.projects-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden; /* only hides slides */
+}
 .projects-container {
   display: flex;
-  flex-wrap: nowrap;   /* No wrapping, so horizontal scroll possible */
-  overflow-x: auto;    /* horizontal scroll */
-  overflow-y: hidden;  /* hide vertical scroll */
   padding: 1rem;
   gap: 2rem;
   margin-top: 2rem;
-  scroll-behavior: smooth;
   width: 100%;
-  max-width: 960px; /* container max width */
+  max-width: 700px; /* container max width */
   margin-left: auto;
   margin-right: auto;
   position: relative; /* for buttons positioning */
-  scrollbar-width: thin; /* for Firefox */
-  scrollbar-color: var(--accent) transparent; /* scrollbar color */
 }
 
-/* Webkit scrollbar for Chrome, Safari */
-.projects-container::-webkit-scrollbar {
-  height: 8px;
-}
-.projects-container::-webkit-scrollbar-thumb {
-  background-color: var(--accent);
-  border-radius: 4px;
-}
-.projects-container::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* On desktop show 3 cards width */
+/* Project cards */
 .project-card {
   flex: 0 0 calc((100% - 4rem) / 3); /* three cards width with gap */
   background: var(--card-bg);
@@ -520,6 +503,8 @@ header {
   box-shadow: 0 0 12px rgba(159, 158, 158, 0.721);
   text-align: center;
   transition: transform 0.4s ease;
+  min-width: 100%;
+  justify-content: space-between; /* Ensures buttons stay at bottom */
 }
 
 .project-card:hover {
@@ -551,63 +536,71 @@ header {
 .projects-nav {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   width: 40px;
   height: 40px;
   background: var(--accent);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
   cursor: pointer;
   opacity: 0.8;
   transition: opacity 0.4s ease, transform 0.3s ease;
   z-index: 10;
-  pointer-events: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
   user-select: none;
   outline: none;
-  border-radius: 4px;
 }
 
-/* Arrow shapes using clip-path */
+.projects-nav:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
 .projects-nav.left {
-  left: -50px;
-  --rotate: 180deg;
-  clip-path: polygon(100% 50%, 0 0, 0 100%);
-  transform: rotate(var(--rotate));
+  left: 10px; /* inside container */
 }
 
 .projects-nav.right {
-  right: -50px;
-  --rotate: 180deg;
-  clip-path: polygon(0 50%, 100% 0, 100% 100%);
-  transform: rotate(var(--rotate));
+  right: 10px; /* inside container */
 }
 
-/* Add arrow icons using ::before */
-.projects-nav::before {
-  content: '';
-  display: inline-block;
-  border-style: solid;
-  border-width: 8px 6px 8px 0;
-  border-color: transparent white transparent transparent;
-  transform: translateX(2px);
-}
-
-.projects-nav.left::before {
-  border-width: 8px 0 8px 6px;
-  border-color: transparent transparent transparent white;
-  transform: translateX(-2px);
-}
-
-/* Focus outline */
 .projects-nav:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
 
-/* Hover effect: translateY and keep rotation */
-.projects-nav:hover {
-  opacity: 1;
-  transform: translateY(-10px) rotate(var(--rotate));
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.project-buttons .btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.live-btn {
+  background-color: #333;
+  color: white;
+}
+
+.github-btn {
+  background-color: #333;
+  color: white;
+}
+
+.project-buttons .btn:hover {
+  opacity: 0.8;
 }
 
 /* MOBILE: adjust container width and buttons position */
@@ -625,7 +618,7 @@ header {
   .projects-nav.right {
     right: 7px;
   }
-}
+} 
 
 footer {
   color: var(--accent);

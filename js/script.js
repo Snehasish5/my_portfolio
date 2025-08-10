@@ -46,25 +46,33 @@ document.getElementById("toggleMode").addEventListener("click", () => {
     }, 100);
   });
 
-
   const slider = document.getElementById('projectsContainer');
-  let currentIndex = 0;
+  const totalSlides = slider.children.length;
+  let currentIndex=0;
+  const scrollAmount = 300; // pixels per click
 
-  function updateSlider() {
-  slider.style.transform = `translateX(-${currentIndex * 100} %)`;
-    const currentCard = slider.children[currentIndex];
-  }
+function nextSlide() {
+  slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}
 
-  function nextSlide() {
-    if (currentIndex < slider.children.length - 1) {
-      currentIndex++;
-      updateSlider();
-    }
-  }
+function prevSlide() {
+  slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+}
 
-  function prevSlide() {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateSlider();
-    }
+function updateSlide() {
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+  if (currentIndex < totalSlides - 1) {
+    currentIndex++;
+    updateSlide();
   }
+}
+
+function prevSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateSlide();
+  }
+}
