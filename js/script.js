@@ -46,46 +46,25 @@ document.getElementById("toggleMode").addEventListener("click", () => {
     }, 100);
   });
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const projectsContainer = document.getElementById('projectsContainer');
-    const btnLeft = document.getElementById('prevBtn');
-    const btnRight = document.getElementById('nextBtn');
-  
-    if (!projectsContainer || !btnLeft || !btnRight) {
-      console.error('Missing projects container or buttons');
-      return;
+
+  const slider = document.getElementById('projectsContainer');
+  let currentIndex = 0;
+
+  function updateSlider() {
+  slider.style.transform = `translateX(-${currentIndex * 100} %)`;
+    const currentCard = slider.children[currentIndex];
+  }
+
+  function nextSlide() {
+    if (currentIndex < slider.children.length - 1) {
+      currentIndex++;
+      updateSlider();
     }
-  
-    // Scroll amount per click - about 80% of container width
-    const scrollAmount = projectsContainer.clientWidth * 0.8;
-  
-    function updateButtons() {
-      btnLeft.style.opacity = projectsContainer.scrollLeft <= 0 ? '0.3' : '0.8';
-      btnLeft.style.pointerEvents = projectsContainer.scrollLeft <= 0 ? 'none' : 'auto';
-  
-      btnRight.style.opacity = projectsContainer.scrollLeft + projectsContainer.clientWidth >= projectsContainer.scrollWidth - 1 ? '0.3' : '0.8';
-      btnRight.style.pointerEvents = projectsContainer.scrollLeft + projectsContainer.clientWidth >= projectsContainer.scrollWidth - 1 ? 'none' : 'auto';
+  }
+
+  function prevSlide() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
     }
-  
-    updateButtons();
-  
-    btnLeft.addEventListener('click', () => {
-      projectsContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    });
-  
-    btnRight.addEventListener('click', () => {
-      projectsContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
-  
-    projectsContainer.addEventListener('scroll', updateButtons);
-  
-    // Optional: allow keyboard activation on Enter or Space
-    [btnLeft, btnRight].forEach(btn => {
-      btn.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          btn.click();
-        }
-      });
-    });
-  });  
+  }
