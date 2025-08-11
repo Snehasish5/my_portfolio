@@ -31,7 +31,7 @@
       <h1>
         Hi, I'm <span>Snehasish Das</span>
       </h1>
-      <h3 id="typing-text">A Full Stack Developer & Data Analyst</h3>
+      <h3><span class="auto-type"></span></h3>
       <p>
         I write code that not only works but wows. With a passion for design and a love for logic, I enjoy turning ideas into sleek, interactive web apps that people enjoy using.
         <br><br>
@@ -311,5 +311,22 @@ if (currentIndex > 0) {
   updateSlide();
 }
 }
+</script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  var typed = new Typed(".auto-type", {
+    strings: [
+      "A Full Stack Developer",
+      "A Data Analyst",
+      "A Backend Developer"
+    ],
+    typeSpeed: 100,
+    backSpeed: 100,
+    startDelay: 0,       // no delay at the start
+    backDelay: 0,        // no delay before starting to delete
+    loop: true,          // repeat forever
+    showCursor: true,    // keep the blinking cursor
+    smartBackspace: false // don't pause for common prefix
+  });
 </script>
 </html>

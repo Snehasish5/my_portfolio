@@ -182,17 +182,17 @@ header {
   color: #ffcc00;
 }
 
-#typing-text {
-  font-size: 2rem;
-  font-weight: 500;
-  font-family: monospace, monospace;
-  color: var(--accent, #58e0ef);
-  white-space: nowrap;
-  border-right: none;
-  overflow: hidden;
-  display: inline-block;
-  min-height: 2.4rem;
-  margin: 0;
+.hero-text h3 span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--accent); /* Updated to use accent color */
+}
+
+.hero-text .auto-type {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
 .hero-text p {
