@@ -1129,4 +1129,17 @@ footer {
     width: calc(50% - 0.75rem); /* slightly bigger width */
     height: auto; /* keep aspect ratio or set fixed height if needed */
   }
+
+  .donut-label {
+    font-size: 0.9rem; /* base font size smaller */
+    /* position remains centered */
+  }
+
+  .donut-label strong {
+    font-size: 1rem; /* smaller bold text */
+  }
+
+  .donut-label span {
+    font-size: 0.75rem; /* smaller secondary text */
+  }
 }
