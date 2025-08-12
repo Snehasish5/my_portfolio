@@ -1014,6 +1014,7 @@ footer {
     max-width: 380px;   /* keep max size */
     height: auto;       /* let height adjust with content */
     padding: 15px 20px; /* slightly less padding */
+    margin-bottom: 25px; /* added vertical spacing */
   }
 
   .skill-card h3 {
