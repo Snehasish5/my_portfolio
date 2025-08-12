@@ -43,7 +43,7 @@ header {
 .navbar .logo h1 {
   font-size: 4rem;
   margin-left: 2.1rem;
-  background: linear-gradient(45deg, #58e0ef, #994aed);
+  background: linear-gradient(45deg,#e7ee19, #fafafa);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -182,13 +182,13 @@ header {
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .hero-text h1 span{
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #ffcc00;
