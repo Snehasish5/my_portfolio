@@ -340,7 +340,7 @@ header {
     .download-btn {
       width: 100%;
       text-align: center;
-      margin-left: 2.9rem; /* remove left margin on mobile */
+      margin-left: 2.4rem; /* remove left margin on mobile */
       display: block;
     }
 }
@@ -862,7 +862,7 @@ footer {
 
   /* Mobile button gradient text */
   .social-card button {
-    background: linear-gradient(45deg, #58e0ef, #994aed);
+    background: linear-gradient(45deg, #e7ee19, #fafafa);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
