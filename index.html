@@ -232,51 +232,51 @@
 
   <section id="professional-skills" class="section">
     <h2>Professional Skills</h2><br><br>
-<div class="donut-charts">
-  <div class="donut-chart" data-percent="70">
-    <svg viewBox="0 0 36 36" class="shadow">
-      <path class="circle-bg" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
-      <path class="circle gradient-1" stroke-dasharray="70, 100" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
-    </svg>
-    <div class="donut-label">
-      <strong>70%</strong>
-      <span>Communication</span>
-    </div>
-  </div>
-
-  <div class="donut-chart" data-percent="90">
-    <svg viewBox="0 0 36 36" class="shadow">
-      <path class="circle-bg" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
-      <path class="circle gradient-2" stroke-dasharray="90, 100" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
-    </svg>
-    <div class="donut-label">
-      <strong>90%</strong>
-      <span>Teamwork</span>
-    </div>
-  </div>
-
-  <div class="donut-chart" data-percent="80">
-    <svg viewBox="0 0 36 36" class="shadow">
-      <path class="circle-bg" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
-      <path class="circle gradient-3" stroke-dasharray="80, 100" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
-    </svg>
-    <div class="donut-label">
-      <strong>80%</strong>
-      <span>Project Management</span>
-    </div>
-  </div>
-
-  <div class="donut-chart" data-percent="75">
-    <svg viewBox="0 0 36 36" class="shadow">
-      <path class="circle-bg" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
-      <path class="circle gradient-4" stroke-dasharray="75, 100" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
-    </svg>
-    <div class="donut-label">
-      <strong>75%</strong>
-      <span>Time Management</span>
-    </div>
-  </div>
-</div>
+    <div class="donut-charts">
+      <div class="donut-chart" data-percent="70">
+        <svg viewBox="0 0 36 36" class="shadow">
+          <path class="circle-bg" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
+          <path class="circle gradient-1" stroke-dasharray="0, 100" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
+        </svg>
+        <div class="donut-label">
+          <strong>70%</strong>
+          <span>Communication</span>
+        </div>
+      </div>
+    
+      <div class="donut-chart" data-percent="90">
+        <svg viewBox="0 0 36 36" class="shadow">
+          <path class="circle-bg" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
+          <path class="circle gradient-2" stroke-dasharray="0, 100" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
+        </svg>
+        <div class="donut-label">
+          <strong>90%</strong>
+          <span>Teamwork</span>
+        </div>
+      </div>
+    
+      <div class="donut-chart" data-percent="80">
+        <svg viewBox="0 0 36 36" class="shadow">
+          <path class="circle-bg" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
+          <path class="circle gradient-3" stroke-dasharray="0, 100" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
+        </svg>
+        <div class="donut-label">
+          <strong>80%</strong>
+          <span>Project Management</span>
+        </div>
+      </div>
+    
+      <div class="donut-chart" data-percent="75">
+        <svg viewBox="0 0 36 36" class="shadow">
+          <path class="circle-bg" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
+          <path class="circle gradient-4" stroke-dasharray="0, 100" d="M18 2.0845a15.9155 15.9155 0 1 1 0 31.831a15.9155 15.9155 0 1 1 0 -31.831"/>
+        </svg>
+        <div class="donut-label">
+          <strong>75%</strong>
+          <span>Time Management</span>
+        </div>
+      </div>
+    </div>    
 
   </section>
   
@@ -375,7 +375,46 @@
     </div>
     
   </div>
-</footer>   
+</footer>  
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const donuts = document.querySelectorAll('.donut-chart');
+    const animationDuration = 1500; // 1.5 seconds
+
+    function animateDonuts() {
+      const startTime = performance.now();
+
+      donuts.forEach(donut => {
+        const circle = donut.querySelector('.circle');
+        const targetPercent = +donut.getAttribute('data-percent');
+
+        function animate(time) {
+          const elapsed = time - startTime;
+          const progress = Math.min(elapsed / animationDuration, 1);
+          const currentPercent = progress * targetPercent;
+
+          circle.setAttribute('stroke-dasharray', `${currentPercent}, 100`);
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            circle.setAttribute('stroke-dasharray', `${targetPercent}, 100`);
+          }
+        }
+
+        requestAnimationFrame(animate);
+      });
+    }
+
+    // Animate first time on load
+    animateDonuts();
+
+    // Repeat every 30 seconds
+    setInterval(() => {
+      animateDonuts();
+    }, 10000);
+  });
+</script>
 </body>
 <script>
 
