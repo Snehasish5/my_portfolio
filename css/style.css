@@ -450,15 +450,17 @@ header {
 
 @media (max-width: 767px) {
   .stats-container {
-    flex-direction: column;
-    align-items: center;
+    display: flex;            /* enable flex */
+    flex-wrap: wrap;          /* allow wrapping */
+    justify-content: center;  /* center items and last odd one */
     gap: 1.5rem;
   }
 
   .stat-box {
-    width: 160px;              /* Slightly smaller for mobile */
-    aspect-ratio: 1 / 1;       /* Keeps width & height equal */
-    border-radius: 50%;        /* Perfect circle */
+    flex: 0 1 calc(50% - 0.75rem); /* roughly half width minus half the gap */
+    max-width: calc(50% - 0.75rem);
+    aspect-ratio: 1 / 1;       /* keep square */
+    border-radius: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
