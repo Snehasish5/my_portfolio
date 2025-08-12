@@ -901,7 +901,7 @@ footer {
   transition: transform 0.3s ease;
 }
 
-.skill-card h3{
+.skill-card h3 {
   color: #edda8e;
   text-align: center;
 }
@@ -923,11 +923,72 @@ footer {
   object-fit: contain;
   filter: grayscale(0);
   transition: transform 0.4s ease;
-  cursor: default;
+  cursor: pointer;
 }
 
 .skill-icons img:hover {
   transform: scale(1.2);
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 160px;
+  background-color: #1c1c1c;
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: #1c1c1c transparent transparent transparent;
+}
+
+/* Progress bar inside tooltip */
+.tooltip .progress-bar {
+  margin-top: 5px;
+  height: 6px;
+  background-color: #444;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.tooltip .progress-fill {
+  height: 100%;
+  background-color: #edda8e;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.tooltip:hover .progress-fill {
+  width: var(--proficiency, 80%);
 }
 
 #professional-skills {
