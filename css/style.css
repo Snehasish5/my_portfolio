@@ -276,7 +276,7 @@ header {
     .navbar .logo h1 {
       font-size: 3rem;
       margin-left: 0.7rem; /* increased from 1.2rem */
-      background: linear-gradient(45deg, #58e0ef, #994aed);
+      background: linear-gradient(45deg, #e7ee19, #fafafa);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
