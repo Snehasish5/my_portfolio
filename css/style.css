@@ -343,6 +343,7 @@ header {
       text-align: center;
       margin-left: 2.4rem; /* remove left margin on mobile */
       display: block;
+      margin-top: -3rem;
     }
 }
 
