@@ -119,6 +119,7 @@ header {
   perspective: 800px; /* optional, for subtle depth */
   margin-bottom: 3rem;
   margin-left: 1.5rem;
+  margin-top: -2rem;
 }
 
 .hero-img .img-card::before {
