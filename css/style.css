@@ -469,7 +469,7 @@ header {
     padding: 0.5rem;
     overflow: hidden;
     min-width: 120px;               /* Optional: prevent too small */
-    max-width: 220px;               /* Optional: max size */
+    max-width: 180px;               /* Optional: max size */
   }
 
   .stat-box h3 {
