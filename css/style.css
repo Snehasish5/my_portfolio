@@ -457,34 +457,24 @@ header {
   }
 
   .stat-box {
-    width: calc(50% - 0.75rem);  /* two per row */
-    height: 0;                   /* reset height */
-    padding-bottom: calc(50% - 0.75rem); /* create square by padding trick */
-    border-radius: 50%;
-    position: relative;          /* for absolute children */
-    box-sizing: border-box;
-    overflow: hidden;
-    background: #eee;            /* just to see the shape during testing */
+    flex: 0 1 calc(50% - 0.75rem);
+    max-width: calc(50% - 0.75rem);
+    width: 100%;            /* take full width of flex-basis */
+    aspect-ratio: 1 / 1;    /* keep perfect square */
+    border-radius: 50%;     /* perfect circle */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  /* To make content fit inside the circle */
-  .stat-box > * {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;  /* or adjust as needed */
-    height: auto;
-    text-align: center;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    overflow: hidden;       /* prevent overflow */
   }
 
   .stat-box h3 {
     font-size: 1rem;
     margin: 0;
+    text-align: center;
   }
 
   .stat-box p {
