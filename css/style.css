@@ -1126,7 +1126,7 @@ footer {
   }
 
   .donut-chart {
-    width: calc(51% - 0.75rem); /* slightly bigger width */
+    width: calc(50% - 0.75rem); /* slightly bigger width */
     height: auto; /* keep aspect ratio or set fixed height if needed */
   }
 }
