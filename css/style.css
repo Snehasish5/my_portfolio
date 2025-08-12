@@ -1122,11 +1122,11 @@ footer {
 @media (max-width: 767px) {
   .donut-charts {
     justify-content: flex-start; /* or center, as you prefer */
-    gap: 2rem;
+    gap: 1.5rem; /* reduced gap for bigger chart */
   }
 
   .donut-chart {
-    width: calc(50% - 1rem); /* half width minus half the gap */
+    width: calc(58% - 0.75rem); /* slightly bigger width */
     height: auto; /* keep aspect ratio or set fixed height if needed */
   }
 }
