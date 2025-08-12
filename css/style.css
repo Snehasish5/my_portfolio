@@ -85,7 +85,7 @@ header {
 
 .navbar .nav-links li a:hover {
   background: none;               /* remove background gradient */
-  color: #0d47a1;                /* fallback */
+  color: #305a9a;                /* fallback */
   text-decoration: none;         /* no underline */
 }
 
