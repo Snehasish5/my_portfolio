@@ -848,7 +848,7 @@ footer {
   .contact-info-card,
   .lets-connect-card,
   .social-contact-cards {
-    max-width: 300px;
+    max-width: 280px;
   }
   .social-contact-cards {
     justify-content: center;
