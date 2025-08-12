@@ -450,23 +450,25 @@ header {
 
 @media (max-width: 767px) {
   .stats-container {
-    display: flex;            /* enable flex */
-    flex-wrap: wrap;          /* allow wrapping */
-    justify-content: center;  /* center items and last odd one */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
   }
 
   .stat-box {
-    flex: 0 1 calc(50% - 0.75rem); /* roughly half width minus half the gap */
+    flex: 0 1 calc(50% - 0.75rem);
     max-width: calc(50% - 0.75rem);
-    aspect-ratio: 1 / 1;       /* keep square */
-    border-radius: 50%;
+    width: 100%;            /* take full width of flex-basis */
+    aspect-ratio: 1 / 1;    /* keep perfect square */
+    border-radius: 50%;     /* perfect circle */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     padding: 0.5rem;
+    overflow: hidden;       /* prevent overflow */
   }
 
   .stat-box h3 {
