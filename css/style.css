@@ -1002,6 +1002,50 @@ footer {
   width: var(--proficiency, 80%);
 }
 
+@media (max-width: 767px) {
+  .skills-container {
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .skill-card {
+    width: 90vw;        /* almost full viewport width */
+    max-width: 380px;   /* keep max size */
+    height: auto;       /* let height adjust with content */
+    padding: 15px 20px; /* slightly less padding */
+  }
+
+  .skill-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-icons {
+    gap: 20px;
+  }
+
+  .skill-icons img {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* Tooltip adjustments */
+  .tooltip .tooltip-text {
+    width: 140px;
+    font-size: 0.85rem;
+    padding: 8px;
+    bottom: 120%;
+  }
+
+  .tooltip .progress-bar {
+    height: 5px;
+  }
+
+  .tooltip .progress-fill {
+    transition: width 0.4s ease;
+  }
+}
+
 #professional-skills {
   padding: 8rem 4rem;
   text-align: center;
