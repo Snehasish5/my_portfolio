@@ -444,25 +444,33 @@ header {
 @media (max-width: 767px){
   /* About Section */
   #about {
-    padding: 40px 1rem; /* Same side margin as hero-text */
-    text-align: left; /* Match hero-text alignment */
+    margin-top: 3rem; /* match hero-text margin */
+    max-width: 100%;
+    padding: 0 1rem;
+    text-align: center !important; /* force left alignment */
   }
 
   .about-wrapper {
     max-width: 100%;
-    padding: 0 1rem; /* Consistent with hero-text */
+    padding: 0 1rem; /* same side padding as hero-text */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* align like hero-text */
   }
 
   .about-container h2 {
-    font-size: 1.6rem; /* Match hero-text h1 size */
+    font-size: 1.6rem; /* match hero-text h1 size */
+    font-weight: 700;
     margin-bottom: 0.8rem;
+    color: var(--accent); /* keep original heading color */
   }
 
   .about-container p {
-    font-size: 1rem; /* Match hero-text paragraph size */
+    font-size: 1rem; /* match hero-text p size */
     line-height: 1.5;
     margin-bottom: 1.2rem;
     text-align: justify;
+    color: #f6eded;
   }
 }
 
