@@ -307,7 +307,7 @@ header {
 
   /* Hero Text Container */
   .hero-text {
-    margin-top: 0.5rem;
+    margin-top: 3rem;
     max-width: 100%;
     padding: 0 1rem;
     align-items: center; /* Center text on small screens */
