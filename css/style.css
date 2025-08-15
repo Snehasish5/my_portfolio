@@ -378,7 +378,7 @@ header {
     .download-btn {
       width: 100%;
       text-align: center;
-      margin-left: 1rem; /* remove left margin on mobile */
+      margin-left: 0.7rem; /* remove left margin on mobile */
       display: block;
     }
 }
