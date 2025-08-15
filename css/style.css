@@ -311,7 +311,7 @@ header {
     max-width: 100%;
     padding: 0 1rem;
     align-items: center; /* Center text on small screens */
-    text-align: center;
+    text-align: left;
   }
 
   .hero-text h4 {
@@ -345,9 +345,9 @@ header {
       gap: 1rem; /* keep gaps between icons */
       justify-content: center; /* center the icons horizontally */
       align-items: center;
-      margin-left: 5.8rem; /* remove left margin on mobile */
+      margin-left: 5rem; /* remove left margin on mobile */
       padding-left: 0;
-      margin-top: 0; /* add some spacing from content above */
+      margin-top: -0.5rem; /* add some spacing from content above */
       margin-bottom: -5rem;
     }
 
