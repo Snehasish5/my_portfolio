@@ -338,14 +338,14 @@ header {
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 1.2rem;
-    text-align: center; /* Avoid excessive text justification on mobile */
+    text-align: left; /* Avoid excessive text justification on mobile */
   }
     .hero-content .socials {
       display: flex;
       gap: 1rem; /* keep gaps between icons */
       justify-content: center; /* center the icons horizontally */
       align-items: center;
-      margin-left: 5rem; /* remove left margin on mobile */
+      margin-left: 4rem; /* remove left margin on mobile */
       padding-left: 0;
       margin-top: -0.5rem; /* add some spacing from content above */
       margin-bottom: -5rem;
