@@ -364,6 +364,7 @@ header {
       width: 36px;  /* slightly smaller icons for mobile */
       height: 36px;
       object-fit: fill;
+      align-items: center;
       filter: drop-shadow(0 0 4px #ffcc00);
       transition: filter 0.3s ease, transform 0.3s ease;
     }
@@ -377,7 +378,7 @@ header {
     .download-btn {
       width: 100%;
       text-align: center;
-      margin-left: 1.3rem; /* remove left margin on mobile */
+      margin-left: 1rem; /* remove left margin on mobile */
       display: block;
     }
 }
