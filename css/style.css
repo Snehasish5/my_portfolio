@@ -528,8 +528,8 @@ header {
   }
 
   .stat-box {
-    flex: 0 1 calc(50% - 0.2rem); /* two per row */
-    width: calc(50% - 0.2rem);
+    flex: 0 1 calc(40% - 1rem); /* two per row */
+    width: calc(40% - 1rem);
     aspect-ratio: 1 / 1; /* perfect circle */
     height: auto; /* ensure aspect ratio works */
     border-radius: 50%;
