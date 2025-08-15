@@ -341,16 +341,16 @@ header {
     text-align: justify; /* Avoid excessive text justification on mobile */
   }
     .hero-content .socials {
-      display: flex;
-      gap: 1rem; /* keep gaps between icons */
-      justify-content: center; /* center the icons horizontally */
-      align-items: center;
-      margin-left: 3rem; /* remove left margin on mobile */
-      padding-left: 0;
-      margin-top: 0rem; /* add some spacing from content above */
-      margin-bottom: -5rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center; /* Center horizontally */
+        align-items: center;
+        margin-left: 0; /* Remove left margin for mobile */
+        margin-right: 0;
+        padding-left: 0;
+        margin-top: 1rem; /* Add some space from text above */
+        margin-bottom: 1rem; /* Adjust bottom spacing */
     }
-
      
     .hero-content .socials a {
       color: #22b4dd;
@@ -361,13 +361,10 @@ header {
     }
   
     .hero-content .socials a img {
-      width: 36px;  /* slightly smaller icons for mobile */
-      height: 36px;
-      object-fit: fill;
-      align-items: center;
-      margin-right: 2.4rem;
+      width: 32px;  /* Slightly smaller for mobile */
+      height: 32px;
+      margin-right: 0; /* Remove unnecessary right spacing */
       filter: drop-shadow(0 0 4px #ffcc00);
-      transition: filter 0.3s ease, transform 0.3s ease;
     }
   
     .hero-content .socials a:hover img {
