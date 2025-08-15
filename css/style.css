@@ -304,6 +304,42 @@ header {
   .hero-img img {
     width: 200px;
   }
+
+  /* Hero Text Container */
+  .hero-text {
+    margin-top: 0.5rem;
+    max-width: 100%;
+    padding: 0 1rem;
+    align-items: center; /* Center text on small screens */
+    text-align: center;
+  }
+
+  .hero-text h4 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-text h1 span {
+    font-size: 1.6rem;
+  }
+
+  .hero-text h3 span,
+  .hero-text .auto-type {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    text-align: center; /* Avoid excessive text justification on mobile */
+  }
     .hero-content .socials {
       display: flex;
       gap: 1rem; /* keep gaps between icons */
