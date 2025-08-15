@@ -318,24 +318,24 @@ header {
   }
 
   .hero-text h1 {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-bottom: 0.8rem;
   }
 
   .hero-text h1 span {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .hero-text h3 span,
   .hero-text .auto-type {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
   }
 
   .hero-text p {
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.5;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.5rem;
     text-align: justify; /* Avoid excessive text justification on mobile */
   }
     .hero-content .socials {
@@ -455,7 +455,7 @@ header {
     padding: 0 1rem; /* same side padding as hero-text */
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* align like hero-text */
+    align-items: center; /* align like hero-text */
   }
 
   .about-container h2 {
