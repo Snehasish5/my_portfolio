@@ -382,6 +382,28 @@ header {
       margin-left: 0.4rem; /* remove left margin on mobile */
       display: block;
     }
+
+    /* About Section */
+  #about {
+    padding: 40px 15px; /* Less padding for small screens */
+    text-align: center;
+  }
+
+  .about-wrapper {
+    max-width: 100%;
+    padding: 0 10px; /* Ensure no text hits the screen edge */
+  }
+
+  .about-container h2 {
+    font-size: 24px; /* Smaller heading for mobile */
+    margin-bottom: 15px;
+  }
+
+  .about-container p {
+    font-size: 16px; /* Adjusted for readability */
+    line-height: 1.6;
+    text-align: center; /* Avoid awkward justification on narrow screens */
+  }
 }
 
 /* About Section */
