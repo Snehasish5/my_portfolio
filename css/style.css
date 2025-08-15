@@ -444,24 +444,25 @@ header {
 @media (max-width: 767px){
   /* About Section */
   #about {
-    padding: 40px 15px; /* Less padding for small screens */
-    text-align: center;
+    padding: 40px 1rem; /* Same side margin as hero-text */
+    text-align: left; /* Match hero-text alignment */
   }
 
   .about-wrapper {
     max-width: 100%;
-    padding: 0 10px; /* Ensure no text hits the screen edge */
+    padding: 0 1rem; /* Consistent with hero-text */
   }
 
   .about-container h2 {
-    font-size: 1.3rem; /* Smaller heading for mobile */
-    margin-bottom: 15px;
+    font-size: 1.6rem; /* Match hero-text h1 size */
+    margin-bottom: 0.8rem;
   }
 
   .about-container p {
-    font-size: 0.5rem; /* Adjusted for readability */
-    line-height: 1.3;
-    text-align: justify; /* Avoid awkward justification on narrow screens */
+    font-size: 1rem; /* Match hero-text paragraph size */
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    text-align: justify;
   }
 }
 
