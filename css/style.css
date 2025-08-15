@@ -450,6 +450,8 @@ header {
     max-width: 100%;
     padding: 0 1rem;
     text-align: center !important; /* force left alignment */
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .about-wrapper {
@@ -461,7 +463,7 @@ header {
   }
 
   .about-container h2 {
-    font-size: 1.6rem; /* match hero-text h1 size */
+    font-size: 1.2rem; /* match hero-text h1 size */
     font-weight: 700;
     margin-bottom: 0.8rem;
     color: var(--accent); /* keep original heading color */
