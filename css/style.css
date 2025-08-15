@@ -386,7 +386,7 @@ header {
     /* About Section */
   #about {
     padding: 40px 15px; /* Less padding for small screens */
-    text-align: center;
+    text-align: justify;
   }
 
   .about-wrapper {
