@@ -356,6 +356,7 @@ header {
       color: #22b4dd;
       text-decoration: none;
       font-size: 1rem;
+      align-items: center;
       margin: 0; /* remove any margin */
     }
   
