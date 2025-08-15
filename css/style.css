@@ -377,6 +377,7 @@ header {
       width: 100%;
       text-align: center;
       margin-left: 0.4rem; /* remove left margin on mobile */
+      margin-top: -0.4rem;
       display: block;
     }
 }
@@ -1099,7 +1100,7 @@ footer {
   }
 
   .skill-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .skill-icons {
