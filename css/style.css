@@ -310,8 +310,8 @@ header {
     padding: 0 1rem;
     align-items: center; /* Center text on small screens */
     text-align: left;
-    margin-left: -1rem;
-    margin-right: -1rem;
+    margin-left: -3rem;
+    margin-right: -3rem;
   }
 
   .hero-text h4 {
