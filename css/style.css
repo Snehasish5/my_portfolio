@@ -337,7 +337,7 @@ header {
   .hero-text p {
     font-size: 1.2rem;
     line-height: 1.4;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
     text-align: justify; /* Avoid excessive text justification on mobile */
   }
     .hero-content .socials {
@@ -937,7 +937,7 @@ footer {
   .contact-info-card,
   .lets-connect-card,
   .social-contact-cards {
-    max-width: 300px;
+    max-width: 310px;
   }
   .social-contact-cards {
     justify-content: center;
@@ -1097,7 +1097,7 @@ footer {
     max-width: 380px;   /* keep max size */
     height: auto;       /* let height adjust with content */
     padding: 15px 20px; /* slightly less padding */
-    margin-bottom: 5px; /* added vertical spacing */
+    margin-bottom: 1rem; /* added vertical spacing */
   }
 
   .skill-card h3 {
