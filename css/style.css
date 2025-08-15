@@ -522,25 +522,35 @@ header {
 /* Mobile styling */
 @media (max-width: 767px) {
   .stats-container {
+    display: flex;
     justify-content: center;
-    gap: 1.5rem;
     flex-wrap: wrap;
+    gap: 1.5rem;
   }
-
+  
   .stat-box {
-    flex: 0 1 calc(50% - 1rem); /* two per row */
-    width: calc(50% - 1rem);
-    aspect-ratio: 1 / 1; /* perfect circle */
-    height: auto; /* ensure aspect ratio works */
+    width: 45%; /* Two per row */
+    padding-top: 45%; /* Same as width to force square */
     border-radius: 50%;
+    position: relative; /* for inner content positioning */
     box-sizing: border-box;
+    background-color: var(--accent); /* optional background */
   }
-
-  /* Center the last stat if odd count */
+  
+  /* Center last stat if odd count */
   .stats-container > .stat-box:nth-last-child(1):nth-child(odd) {
-    flex: 0 1 100%;
-    max-width: 50%;
-    margin-inline: auto;
+    width: 45%;
+    padding-top: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Optional: inner content centered inside circle */
+  .stat-box > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .stat-box h3 {
