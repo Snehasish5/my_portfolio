@@ -363,7 +363,7 @@ header {
     .hero-content .socials a img {
       width: 32px;  /* Slightly smaller for mobile */
       height: 32px;
-      margin-right: 0; /* Remove unnecessary right spacing */
+      margin-right: -0.3rem; /* Remove unnecessary right spacing */
       filter: drop-shadow(0 0 4px #ffcc00);
     }
   
