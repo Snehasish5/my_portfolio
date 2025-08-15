@@ -527,20 +527,39 @@ header {
     flex-wrap: wrap;
   }
 
-  /* Make each card take half row; override fixed size */
-  .stats-container > .stat-box {
-    flex: 0 1 calc(50% - 1rem);
-    width: calc(50% - 1rem) !important; /* override 180px */
-    height: auto !important;            /* override 180px */
-    aspect-ratio: 1 / 1;                /* keep circle */
+  .stat-box {
+    flex: 0 1 calc(50% - 1rem); /* two per row */
+    width: calc(50% - 1rem);
+    aspect-ratio: 1 / 1; /* perfect circle */
+    height: auto; /* ensure aspect ratio works */
+    border-radius: 50%;
     box-sizing: border-box;
   }
 
-  /* Center the last one if the count of items is odd */
+  /* Center the last stat if odd count */
   .stats-container > .stat-box:nth-last-child(1):nth-child(odd) {
     flex: 0 1 100%;
     max-width: 50%;
-    margin-inline: auto; /* center horizontally */
+    margin-inline: auto;
+  }
+
+  .stat-box h3 {
+    margin: 0.3rem 0 0;
+    font-weight: 600;
+    font-size: 1rem; /* smaller heading */
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .stat-box p {
+    font-size: 1.5rem; /* smaller number text */
+    font-weight: bold;
+    color: #4caf50;
+    margin: 0.3rem 0;
+  }
+
+  .stat-box:hover {
+    transform: translateY(-6px); /* smaller lift effect on mobile */
   }
 }
 
