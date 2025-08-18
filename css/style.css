@@ -706,6 +706,16 @@ header {
   .project-card {
     flex: 0 0 100%;
   }
+
+  .project-card img {
+    width: 100%;
+    height: auto;         /* auto height to maintain aspect ratio */
+    max-height: 250px;    /* optional: restrict max height on mobile */
+    object-fit: fill;    /* ensures image covers container without distortion */
+    border-radius: 8px;
+    display: block;
+  }
+
   .projects-nav.left {
     left: 7px;
   }
