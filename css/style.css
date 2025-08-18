@@ -717,10 +717,11 @@ header {
   }
 
   .project-card p {
-    width: 100%;           /* ensure it fills the container */
-    overflow: hidden;      /* hide overflowing text */
-    text-overflow: ellipsis; /* show "..." for overflow */
-    white-space: nowrap;   /* keep text on a single line */
+    width: 100%;           /* fill container width */
+    overflow-wrap: break-word; /* break long words to fit */
+    word-break: break-word;    /* ensure text wraps */
+    white-space: normal;       /* allow multiple lines */
+    margin: 0;                 /* optional: remove default margin */
 }
 
   .projects-nav.left {
