@@ -507,12 +507,13 @@ header {
   margin: 0.5rem 0 0;
   font-weight: 600;
   font-size: 1.2rem;
+  color: var(--accent);
 }
 
 .stat-box p {
   font-size: 2rem;
   font-weight: bold;
-  color: #4caf50;
+  color: #fff;
   margin: 0.5rem 0;
 }
 
@@ -554,12 +555,13 @@ header {
     font-size: 1rem; /* smaller heading */
     text-align: center;
     line-height: 1.2;
+    color: var(--accent);
   }
 
   .stat-box p {
     font-size: 1.5rem; /* smaller number text */
     font-weight: bold;
-    color: #4caf50;
+    color: #fff;
     margin: 0.3rem 0;
   }
 
@@ -979,7 +981,7 @@ footer {
 .skills-container {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 25px;
   flex-wrap: wrap;
   margin-top: 30px;
 }
@@ -998,6 +1000,7 @@ footer {
 .skill-card h3 {
   color: #edda8e;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .skill-card:hover {
@@ -1182,49 +1185,49 @@ footer {
 
 /* Gradient simulation using keyframes */
 .gradient-1 {
-  animation: gradientGreen 2s linear infinite;
+  animation: gradientyellow 2s linear infinite;
 }
 .gradient-2 {
-  animation: gradientPurple 2s linear infinite;
+  animation: gradientwhite 2s linear infinite;
 }
 .gradient-3 {
-  animation: gradientOrange 2s linear infinite;
+  animation: gradientYellow 2s linear infinite;
 }
 .gradient-4 {
-  animation: gradientBlue 2s linear infinite;
+  animation: gradientWhite 2s linear infinite;
 }
 
 /* Keyframe animations */
-@keyframes gradientGreen {
-  0% { stroke: #1b5e20; }
-  25% { stroke: #2e7d32; }
-  50% { stroke: #388e3c; }
-  75% { stroke: #63d968; }
-  100% { stroke: #1b5e20; }
+@keyframes gradientyellow {
+  0% { stroke: var(--accent); }
+  25% { stroke: var(--accent); }
+  50% { stroke: var(--accent); }
+  75% { stroke: var(--accent); }
+  100% { stroke: var(--accent); }
 }
 
-@keyframes gradientPurple {
-  0% { stroke: #6a1b9a; }
-  25% { stroke: #8e24aa; }
-  50% { stroke: #ab47bc; }
-  75% { stroke: #ce93d8; }
-  100% { stroke: #6a1b9a; }
+@keyframes gradientwhite {
+  0% { stroke: #fff; }
+  25% { stroke: #fff; }
+  50% { stroke: #fff; }
+  75% { stroke: #fff; }
+  100% { stroke: #fff; }
 }
 
-@keyframes gradientOrange {
-  0% { stroke: #e65100; }
-  25% { stroke: #ef6c00; }
-  50% { stroke: #f57c00; }
-  75% { stroke: #ffb74d; }
-  100% { stroke: #e65100; }
+@keyframes gradientYellow {
+  0% { stroke: var(--accent); }
+  25% { stroke: var(--accent); }
+  50% { stroke: var(--accent); }
+  75% { stroke: var(--accent); }
+  100% { stroke: var(--accent); }
 }
 
-@keyframes gradientBlue {
-  0% { stroke: #0d47a1; }
-  25% { stroke: #1976d2; }
-  50% { stroke: #2196f3; }
-  75% { stroke: #64b5f6; }
-  100% { stroke: #0d47a1; }
+@keyframes gradientWhite {
+  0% { stroke: #fff; }
+  25% { stroke: #fff; }
+  50% { stroke: #fff; }
+  75% { stroke: #fff; }
+  100% { stroke: #fff; }
 }
 
 /* Label styles */
