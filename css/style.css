@@ -716,9 +716,12 @@ header {
     display: block;
   }
 
-  .project-card p{
-    object-fit: fill;
-  }
+  .project-card p {
+    width: 100%;           /* ensure it fills the container */
+    overflow: hidden;      /* hide overflowing text */
+    text-overflow: ellipsis; /* show "..." for overflow */
+    white-space: nowrap;   /* keep text on a single line */
+}
 
   .projects-nav.left {
     left: 7px;
