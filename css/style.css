@@ -910,7 +910,7 @@ footer {
   border: none;
   font-weight: 700;
   
-  background: linear-gradient(45deg, #58e0ef, #994aed);
+  background: linear-gradient(45deg, #ffcc00, #fafafa);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -926,7 +926,7 @@ footer {
   background-clip: text;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
-  color: var(--accent);
+  color: #0077b6;
 }
 
 
