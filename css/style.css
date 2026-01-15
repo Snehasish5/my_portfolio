@@ -964,7 +964,7 @@ footer {
 
   /* Mobile button gradient text */
   .social-card button {
-    background: linear-gradient(45deg, #ffcc00, #fafafa);
+    background-color: var(--accent);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -979,7 +979,7 @@ footer {
     background-clip: text;
     -webkit-background-clip: unset !important;
     -webkit-text-fill-color: unset !important;
-    color: var(--accent) !important;
+    color: #815eea !important;
   }
 }
 .section h2 {
